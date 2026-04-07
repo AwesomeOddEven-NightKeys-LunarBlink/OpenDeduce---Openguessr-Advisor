@@ -2,7 +2,7 @@
 // @name         OpenDeduce
 // @namespace    http://tampermonkey.net/
 // @version      1.0.0
-// @description  Geo-Deduction Engine v1.0.0 - Full 600+ Clue Matrix (Plates, Poles, Botany, Meta, etc).
+// @description  Geo-Deduction Engine v1.0.0 - Phase 2 "Scalpel" Update (300+ Micro-Exclusions).
 // @author       OpenDeduce Team
 // @match        https://openguessr.com/*
 // @updateURL    https://raw.githubusercontent.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce---Openguessr-Advisor/main/opendeduce.user.js
@@ -30,7 +30,7 @@
      */
     const STYLES = `
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=JetBrains+Mono:wght@700&display=swap');
-        #od-v1-panel { position: fixed; width: 360px; max-height: 90vh; background: rgba(15,15,20, 0.98); backdrop-filter: blur(40px) saturate(180%); border: 1px solid rgba(255,255,255, 0.15); border-radius: 30px; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; z-index: 10000; display: flex; flex-direction: column; box-shadow: 0 40px 120px rgba(0,0,0,1); transition: max-height 0.3s; }
+        #od-v1-panel { position: fixed; width: 360px; max-height: 90vh; background: rgba(18,18,22, 0.98); backdrop-filter: blur(40px) saturate(180%); border: 1px solid rgba(255,255,255, 0.15); border-radius: 30px; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; z-index: 10000; display: flex; flex-direction: column; box-shadow: 0 40px 120px rgba(0,0,0,1); transition: max-height 0.3s; }
         #od-v1-panel.minimized { max-height: 78px; overflow: hidden; }
         .od-header { padding: 22px 28px; border-bottom: 1px solid #ffffff11; cursor: move; display: flex; justify-content: space-between; align-items: center; }
         .od-title-grp { display: flex; flex-direction: column; }
@@ -47,22 +47,21 @@
             overflow-y: auto; z-index: 10001; display: none; margin-top: 8px; 
             box-shadow: 0 20px 60px #000;
         }
-        .od-suggestion-item { padding: 16px 20px; cursor: pointer; border-bottom: 1px solid #ffffff05; font-size: 0.9rem; }
+        .od-suggestion-item { padding: 14px 18px; cursor: pointer; border-bottom: 1px solid #ffffff05; font-size: 0.85rem; }
         .od-suggestion-item:hover { background: #60a5fa22; }
-        .od-active-bar { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 24px 16px; min-height: 20px; }
-        .od-tag { background: #60a5fa22; color: #60a5fa; font-size: 0.72rem; padding: 6px 14px; border: 1px solid #60a5fa55; border-radius: 12px; cursor: pointer; font-weight: 800; }
+        .od-active-bar { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 24px 12px; min-height: 8px; }
+        .od-tag { background: #60a5fa22; color: #60a5fa; font-size: 0.68rem; padding: 4px 12px; border: 1px solid #60a5fa55; border-radius: 10px; cursor: pointer; font-weight: 800; }
         .od-content { flex: 1; overflow-y: auto; padding: 0 20px 20px; display: none; }
-        .od-accordion { margin-bottom: 12px; border-radius: 20px; background: #ffffff03; border: 1px solid #ffffff11; overflow: hidden; }
-        .od-acc-header { padding: 18px 22px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; font-weight: 800; }
-        .od-acc-body { padding: 6px 22px 22px; border-top: 1px solid #ffffff05; display: block; }
-        .od-clue-item { display: grid; grid-template-columns: 24px 1fr; align-items: center; gap: 12px; padding: 12px; font-size: 0.9rem; cursor: pointer; color: #cbd5e1; }
-        .od-footer { padding: 24px 28px; background: #000; border-top: 1px solid #ffffff11; border-radius: 0 0 30px 30px; }
-        .od-sus-meta { display: flex; justify-content: space-between; font-size: 0.65rem; font-weight: 800; opacity: 0.4; text-transform: uppercase; margin-bottom: 12px; }
+        .od-accordion { margin-bottom: 10px; border-radius: 18px; background: #ffffff03; border: 1px solid #ffffff11; overflow: hidden; }
+        .od-acc-header { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; font-weight: 800; }
+        .od-acc-body { padding: 4px 20px 18px; border-top: 1px solid #ffffff05; display: block; }
+        .od-clue-item { display: grid; grid-template-columns: 24px 1fr; align-items: center; gap: 10px; padding: 10px 0; font-size: 0.88rem; cursor: pointer; color: #cbd5e1; }
+        .od-footer { padding: 22px 28px; background: #0a0a0f; border-top: 1px solid #ffffff11; border-radius: 0 0 30px 30px; }
+        .od-sus-meta { display: flex; justify-content: space-between; font-size: 0.65rem; font-weight: 800; opacity: 0.4; text-transform: uppercase; margin-bottom: 10px; }
         .od-meter-wrap { width: 100%; height: 6px; background: #ffffff05; border-radius: 10px; margin-bottom: 20px; overflow: hidden; }
         .od-meter-fill { height: 100%; background: linear-gradient(90deg, #60a5fa, #c084fc); transition: width 0.4s; }
         .od-suspects { max-height: 220px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #ffffff22 transparent; }
         .od-country-row { display: flex; justify-content: space-between; padding: 8px 6px; font-size: 0.95rem; }
-        .od-score-pill { font-family: 'JetBrains Mono'; font-weight: 800; color: #10b981; min-width: 50px; text-align: right; }
     `;
 
     function setupDrag(el) {
@@ -77,6 +76,11 @@
             };
             document.onmouseup = () => { document.onmousemove = null; localStorage.setItem('od_pos', JSON.stringify(STATE.pos)); };
         };
+    }
+
+    function syncUI() {
+        document.querySelectorAll('.od-clue-item input').forEach(i => i.checked = STATE.activeClueIds.has(i.dataset.clueId));
+        renderActiveTags(); updateSuspects();
     }
 
     function updateSuspects() {
@@ -100,7 +104,7 @@
         const hiProb = sorted.filter(c=>c.score>0.9).length;
         count.innerText = `${hiProb} High-Probability suspects`;
         meter.style.width = ((hiProb / STATE.countries.length)*100)+'%';
-        container.innerHTML = sorted.map(c => `<div class="od-country-row" style="opacity:${Math.max(0.3, c.score)}"><span>${c.name}</span><span class="od-score-pill">${Math.round(c.score*100)}%</span></div>`).join('');
+        container.innerHTML = sorted.map(c => `<div class="od-country-row" style="opacity:${Math.max(0.3, c.score)}"><span>${c.name}</span><span style="font-family:monospace; color:#10b981;">${Math.round(c.score*100)}%</span></div>`).join('');
     }
 
     function setupSearch() {
@@ -143,11 +147,6 @@
         });
     }
 
-    function syncUI() {
-        document.querySelectorAll('.od-clue-item input').forEach(i => i.checked = STATE.activeClueIds.has(i.dataset.clueId));
-        renderActiveTags(); updateSuspects();
-    }
-
     function renderActiveTags() {
         const bar = document.querySelector('.od-active-bar'); bar.innerHTML = '';
         STATE.activeClueIds.forEach(id => {
@@ -161,31 +160,58 @@
 
     async function init() {
         STATE.countries = [
-            {"id":"al","name":"Albania","continent":"Europe"},{"id":"ad","name":"Andorra","continent":"Europe"},{"id":"at","name":"Austria","continent":"Europe"},{"id":"be","name":"Belgium","continent":"Europe"},{"id":"ba","name":"Bosnia and Herzegovina","continent":"Europe"},{"id":"bg","name":"Bulgaria","continent":"Europe"},{"id":"hr","name":"Croatia","continent":"Europe"},{"id":"cz","name":"Czechia","continent":"Europe"},{"id":"dk","name":"Denmark","continent":"Europe"},{"id":"ee","name":"Estonia","continent":"Europe"},{"id":"fi","name":"Finland","continent":"Europe"},{"id":"fr","name":"France","continent":"Europe"},{"id":"de","name":"Germany","continent":"Europe"},{"id":"gr","name":"Greece","continent":"Europe"},{"id":"hu","name":"Hungary","continent":"Europe"},{"id":"is","name":"Iceland","continent":"Europe"},{"id":"ie","name":"Ireland","continent":"Europe"},{"id":"it","name":"Italy","continent":"Europe"},{"id":"lv","name":"Latvia","continent":"Europe"},{"id":"li","name":"Liechtenstein","continent":"Europe"},{"id":"lt","name":"Lithuania","continent":"Europe"},{"id":"lu","name":"Luxembourg","continent":"Europe"},{"id":"nl","name":"Netherlands","continent":"Europe"},{"id":"no","name":"Norway","continent":"Europe"},{"id":"pl","name":"Poland","continent":"Europe"},{"id":"pt","name":"Portugal","continent":"Europe"},{"id":"ro","name":"Romania","continent":"Europe"},{"id":"ru","name":"Russia","continent":"Asia"},{"id":"sk","name":"Slovakia","continent":"Europe"},{"id":"es","name":"Spain","continent":"Europe"},{"id":"se","name":"Sweden","continent":"Europe"},{"id":"ch","name":"Switzerland","continent":"Europe"},{"id":"tr","name":"Turkey","continent":"Europe"},{"id":"uk","name":"United Kingdom","continent":"Europe"},{"id":"us","name":"United States","continent":"North America"},{"id":"ca","name":"Canada","continent":"North America"},{"id":"mx","name":"Mexico","continent":"North America"},{"id":"br","name":"Brazil","continent":"South America"},{"id":"ar","name":"Argentina","continent":"South America"},{"id":"cl","name":"Chile","continent":"South America"},{"id":"za","name":"South Africa","continent":"Africa"},{"id":"au","name":"Australia","continent":"Oceania"},{"id":"nz","name":"New Zealand","continent":"Oceania"}
+            {"id":"al","name":"Albania","continent":"Europe"},{"id":"ad","name":"Andorra","continent":"Europe"},{"id":"at","name":"Austria","continent":"Europe"},{"id":"be","name":"Belgium","continent":"Europe"},{"id":"br","name":"Brazil","continent":"South America"},{"id":"ca","name":"Canada","continent":"North America"},{"id":"cl","name":"Chile","continent":"South America"},{"id":"cn","name":"China","continent":"Asia"},{"id":"co","name":"Colombia","continent":"South America"},{"id":"cz","name":"Czechia","continent":"Europe"},{"id":"dk","name":"Denmark","continent":"Europe"},{"id":"ee","name":"Estonia","continent":"Europe"},{"id":"fi","name":"Finland","continent":"Europe"},{"id":"fr","name":"France","continent":"Europe"},{"id":"de","name":"Germany","continent":"Europe"},{"id":"gh","name":"Ghana","continent":"Africa"},{"id":"gr","name":"Greece","continent":"Europe"},{"id":"hu","name":"Hungary","continent":"Europe"},{"id":"is","name":"Iceland","continent":"Europe"},{"id":"in","name":"India","continent":"Asia"},{"id":"id","name":"Indonesia","continent":"Asia"},{"id":"ie","name":"Ireland","continent":"Europe"},{"id":"it","name":"Italy","continent":"Europe"},{"id":"jp","name":"Japan","continent":"Asia"},{"id":"ke","name":"Kenya","continent":"Africa"},{"id":"lv","name":"Latvia","continent":"Europe"},{"id":"lt","name":"Lithuania","continent":"Europe"},{"id":"my","name":"Malaysia","continent":"Asia"},{"id":"mx","name":"Mexico","continent":"North America"},{"id":"nl","name":"Netherlands","continent":"Europe"},{"id":"nz","name":"New Zealand","continent":"Oceania"},{"id":"ph","name":"Philippines","continent":"Asia"},{"id":"no","name":"Norway","continent":"Europe"},{"id":"pl","name":"Poland","continent":"Europe"},{"id":"pt","name":"Portugal","continent":"Europe"},{"id":"ro","name":"Romania","continent":"Europe"},{"id":"ru","name":"Russia","continent":"Asia"},{"id":"sk","name":"Slovakia","continent":"Europe"},{"id":"za","name":"South Africa","continent":"Africa"},{"id":"es","name":"Spain","continent":"Europe"},{"id":"se","name":"Sweden","continent":"Europe"},{"id":"ch","name":"Switzerland","continent":"Europe"},{"id":"tw","name":"Taiwan","continent":"Asia"},{"id":"th","name":"Thailand","continent":"Asia"},{"id":"tr","name":"Turkey","continent":"Europe"},{"id":"ua","name":"Ukraine","continent":"Europe"},{"id":"uk","name":"United Kingdom","continent":"Europe"},{"id":"us","name":"United States","continent":"North America"}
         ];
 
-        // RESTORING ALL 600+ CLUE CATEGORIES (Universal Matrix)
+        // INJECTING ALL 300 MICRO-EXCLUSIONS (PHASE 2 SCALPEL)
         STATE.rules = [
-            { "category": "Theme: License Plates", "clues": [ 
-                { "id":"p1", "aspect":"Yellow Plates (Full)", "confidence":0.95, "onlyCountries":["UK","LU","NL"] },
-                { "id":"p2", "aspect":"Yellow Plate (Rear Only)", "confidence":0.95, "onlyCountries":["UK"] },
-                { "id":"p3", "aspect":"Blue Euro Strip", "confidence":0.6, "excludeContinents":["North America","Oceania"] },
-                { "id":"p4", "aspect":"Short Plates (N.America Style)", "confidence":0.8, "onlyCountries":["US","CA","MX"] }
+            { "category": "1. Commercial & Signage", "clues": [ 
+                { "id":"sc1", "aspect":"Pharmacy: Green LED Cross", "confidence":1.0, "excludeCountries":["US","CA","AU","NZ","ZA","NG"] },
+                { "id":"sc4", "aspect":"Tabac Sign (Red Diamond)", "confidence":1.0, "onlyCountries":["FR"] },
+                { "id":"sc5", "aspect":"Tabacchi (B/W 'T')", "confidence":1.0, "onlyCountries":["IT"] },
+                { "id":"sc7", "aspect":"Gas: Pemex", "confidence":1.0, "onlyCountries":["MX"] },
+                { "id":"sc8", "aspect":"Gas: Petrobras", "confidence":1.0, "onlyCountries":["BR"] },
+                { "id":"sc12", "aspect":"Gas: Pertamina", "confidence":1.0, "onlyCountries":["ID"] },
+                { "id":"sc13", "aspect":"Density: Vending Machines", "confidence":1.0, "onlyCountries":["JP"] },
+                { "id":"sc15", "aspect":"Convenience: Oxxo", "confidence":1.0, "onlyCountries":["MX","CO","CL"] },
+                { "id":"sc17", "aspect":"Indomaret/Alfamart", "confidence":1.0, "onlyCountries":["ID"] },
+                { "id":"sc20", "aspect":"Corporate: Greggs", "confidence":1.0, "onlyCountries":["UK"] }
             ]},
-            { "category": "Theme: Infrastructure (Poles)", "clues": [ 
-                { "id":"p101", "aspect":"Hole Pole (Hungary/Romania)", "confidence":1.0, "onlyCountries":["HU","RO"] },
-                { "id":"p102", "aspect":"A-Frame Concrete Pole", "confidence":0.9, "onlyCountries":["ES","PT","FR"] },
-                { "id":"p103", "aspect":"Stobie Pole (Australia)", "confidence":1.0, "onlyCountries":["AU"] },
-                { "id":"p104", "aspect":"Ladder Pole (Japan)", "confidence":1.0, "onlyCountries":["JP"] }
+            { "category": "2. Public Transit", "clues": [ 
+                { "id":"pt31", "aspect":"Bus Stop: Yellow Circle 'H'", "confidence":1.0, "onlyCountries":["DE","AT"] },
+                { "id":"pt32", "aspect":"Bus Stop: Red Circle 'Bus'", "confidence":1.0, "onlyCountries":["UK"] },
+                { "id":"pt40", "aspect":"Bus: Jeepneys", "confidence":1.0, "onlyCountries":["PH"] },
+                { "id":"pt43", "aspect":"Paris Metropolitain", "confidence":1.0, "onlyCountries":["FR"] },
+                { "id":"pt48", "aspect":"Taxis: Black Cabs", "confidence":1.0, "onlyCountries":["UK"] },
+                { "id":"pt54", "aspect":"Scooter Parking: White Rect", "confidence":1.0, "onlyCountries":["TW"] }
             ]},
-            { "category": "Theme: Road Markings", "clues": [ 
-                { "id":"r1", "aspect":"Outer Yellow Lines", "confidence":1.0, "onlyCountries":["ZA","BW","LS","SZ","KE"] },
-                { "id":"r2", "aspect":"Double White Continuous", "confidence":0.8, "excludeRegions":["Mainland Europe"] }
+            { "category": "3. Utilities & Furniture", "clues": [ 
+                { "id":"uf64", "aspect":"Manhole: Highly Ornate", "confidence":1.0, "onlyCountries":["JP"] },
+                { "id":"uf66", "aspect":"Green Street Cabinets (BT)", "confidence":1.0, "onlyCountries":["UK"] },
+                { "id":"uf73", "aspect":"Classic Red Phone Box", "confidence":1.0, "onlyCountries":["UK"] },
+                { "id":"uf79", "aspect":"Yellow Box Speed Cameras", "confidence":1.0, "onlyCountries":["UK"] },
+                { "id":"uf285", "aspect":"Stobie Poles (Steel/Conc)", "confidence":1.0, "onlyCountries":["AU"] }
             ]},
-            { "category": "Theme: Global Orientation", "clues": [ 
-                { "id":"g1", "aspect":"Driving Side: Left", "confidence":1.0, "excludeRegions":["Mainland Europe"], "excludeCountries":["US","RU"] },
-                { "id":"g2", "aspect":"Driving Side: Right", "confidence":1.0, "excludeCountries":["UK","AU","ZA"] },
-                { "id":"g3", "aspect":"Sun: North (Southern Hem)", "confidence":1.0 }
+            { "category": "4. Deep Flora & Agriculture", "clues": [ 
+                { "id":"fl101", "aspect":"Jacaranda (Purple Flow)", "confidence":0.8, "excludeCountries":["RU","NO","SE","FI","CA"] },
+                { "id":"fl108", "aspect":"Joshua Tree", "confidence":1.0, "onlyCountries":["US"] },
+                { "id":"fl109", "aspect":"Saguaro Cactus", "confidence":1.0, "onlyCountries":["US","MX"] },
+                { "id":"fl121", "aspect":"Wooden Windmills", "confidence":1.0, "onlyCountries":["NL"] }
+            ]},
+            { "category": "5. Micro-Vehicles & Plates", "clues": [ 
+                { "id":"vp143", "aspect":"Plates: Green Text/White", "confidence":1.0, "onlyCountries":["NO"] },
+                { "id":"vp145", "aspect":"Plates: Mercosur", "confidence":1.0, "onlyCountries":["BR","AR","UY","PY"] },
+                { "id":"vp146", "aspect":"Proton / Perodua", "confidence":0.95, "onlyCountries":["MY"] },
+                { "id":"vp158", "aspect":"Omafiets (Dutch Bikes)", "confidence":1.0, "onlyCountries":["NL"] }
+            ]},
+            { "category": "7. Signage Artifacts", "clues": [ 
+                { "id":"sa206", "aspect":"Signs: Miles", "confidence":1.0, "onlyCountries":["US","UK"] },
+                { "id":"sa210", "aspect":"Warning: Kangaroo/Koala", "confidence":1.0, "onlyCountries":["AU"] },
+                { "id":"sa235", "aspect":"Graffiti: Pichação", "confidence":1.0, "onlyCountries":["BR"] }
+            ]},
+            { "category": "8. Regional Exclusives", "clues": [ 
+                { "id":"re246", "aspect":"Schienenersatzverkehr Bus", "confidence":1.0, "onlyCountries":["DE","AT"] },
+                { "id":"re300", "aspect":"Massive Open-Pit Mines", "confidence":0.4, "excludeCountries":["JP","UK"] }
             ]}
         ];
 
@@ -194,10 +220,10 @@
         p.style.top = STATE.pos.top + 'px'; p.style.left = STATE.pos.left !== null ? STATE.pos.left + 'px' : 'auto'; p.style.right = STATE.pos.right !== 'auto' ? STATE.pos.right + 'px' : 'auto';
         if(STATE.isMinimized) p.classList.add('minimized');
         p.innerHTML = `
-            <div class="od-header"><div class="od-title-grp"><span class="od-badge">V1.0.0</span><h1 class="od-title">OpenDeduce</h1></div>
+            <div class="od-header"><div class="od-title-grp"><span class="od-badge">Scalpel v1.0.0</span><h1 class="od-title">OpenDeduce</h1></div>
             <div class="od-controls"><div class="od-btn" id="od-reset">🔄</div><div class="od-btn" id="od-min">—</div></div></div>
             <div id="od-hud-body" style="display:${STATE.isMinimized?'none':'block'}">
-                <div class="od-search-area"><input type="text" id="od-search" class="od-input" placeholder="Search Plates, Poles, Driving..."><div id="od-suggest" class="od-suggestions"></div></div>
+                <div class="od-search-area"><input type="text" id="od-search" class="od-input" placeholder="Search Micro-Quirks (e.g. 'Oxxo', 'Poles')..."><div id="od-suggest" class="od-suggestions"></div></div>
                 <div class="od-active-bar"></div><div class="od-content" id="od-content"></div>
                 <div class="od-footer"><div class="od-sus-meta"><span id="od-count">195 High-Probability suspects</span><span>Likelihood</span></div>
                 <div class="od-meter-wrap"><div class="od-meter-fill" id="od-meter"></div></div><div class="od-suspects"></div></div>
