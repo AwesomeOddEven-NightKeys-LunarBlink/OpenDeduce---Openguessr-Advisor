@@ -1,38 +1,1649 @@
 {
-  "version": "1.0.0",
-  "countries": [
-    {"id":"al","name":"Albania","continent":"Europe"},{"id":"ad","name":"Andorra","continent":"Europe"},{"id":"at","name":"Austria","continent":"Europe"},{"id":"by","name":"Belarus","continent":"Europe"},{"id":"be","name":"Belgium","continent":"Europe"},{"id":"ba","name":"Bosnia and Herzegovina","continent":"Europe"},{"id":"bg","name":"Bulgaria","continent":"Europe"},{"id":"hr","name":"Croatia","continent":"Europe"},{"id":"cz","name":"Czechia","continent":"Europe"},{"id":"dk","name":"Denmark","continent":"Europe"},{"id":"ee","name":"Estonia","continent":"Europe"},{"id":"fi","name":"Finland","continent":"Europe"},{"id":"fr","name":"France","continent":"Europe"},{"id":"de","name":"Germany","continent":"Europe"},{"id":"gr","name":"Greece","continent":"Europe"},{"id":"hu","name":"Hungary","continent":"Europe"},{"id":"is","name":"Iceland","continent":"Europe"},{"id":"ie","name":"Ireland","continent":"Europe"},{"id":"it","name":"Italy","continent":"Europe"},{"id":"lv","name":"Latvia","continent":"Europe"},{"id":"lt","name":"Lithuania","continent":"Europe"},{"id":"nl","name":"Netherlands","continent":"Europe"},{"id":"no","name":"Norway","continent":"Europe"},{"id":"pl","name":"Poland","continent":"Europe"},{"id":"pt","name":"Portugal","continent":"Europe"},{"id":"ro","name":"Romania","continent":"Europe"},{"id":"ru","name":"Russia","continent":"Asia"},{"id":"sk","name":"Slovakia","continent":"Europe"},{"id":"es","name":"Spain","continent":"Europe"},{"id":"se","name":"Sweden","continent":"Europe"},{"id":"ch","name":"Switzerland","continent":"Europe"},{"id":"tr","name":"Turkey","continent":"Europe"},{"id":"uk","name":"United Kingdom","continent":"Europe"},{"id":"ua","name":"Ukraine","continent":"Europe"},{"id":"us","name":"United States","continent":"North America"},{"id":"ca","name":"Canada","continent":"North America"},{"id":"mx","name":"Mexico","continent":"North America"},{"id":"br","name":"Brazil","continent":"South America"},{"id":"ar","name":"Argentina","continent":"South America"},{"id":"cl","name":"Chile","continent":"South America"},{"id":"za","name":"South Africa","continent":"Africa"},{"id":"au","name":"Australia","continent":"Oceania"},{"id":"nz","name":"New Zealand","continent":"Oceania"},{"id":"id","name":"Indonesia","continent":"Asia"},{"id":"th","name":"Thailand","continent":"Asia"},{"id":"jp","name":"Japan","continent":"Asia"},{"id":"my","name":"Malaysia","continent":"Asia"},{"id":"ph","name":"Philippines","continent":"Asia"},{"id":"ke","name":"Kenya","continent":"Africa"}
-  ],
-  "rules": [
-    { "category": "Block 6: Architectural Dead-Drop", "clues": [ 
-        { "id":"a501", "aspect":"Falun Red Walls w/ White Trim", "confidence":1.0, "onlyCountries":["SE","FI"] },
-        { "id":"a526", "aspect":"Blue-domed white houses", "confidence":1.0, "onlyCountries":["GR"] },
-        { "id":"a551", "aspect":"Soviet Commieblocks (Brutalist)", "confidence":0.7, "excludeCountries":["US","CA","AU","NZ"] },
-        { "id":"a576", "aspect":"Exposed Rebar on flat roofs", "confidence":0.8, "excludeCountries":["UK","DE","CH"] }
-    ]},
-    { "category": "Block 7: Utility & Street Furniture", "clues": [ 
-        { "id":"u601", "aspect":"Yellow 'H' Bus Stop Sign", "confidence":1.0, "onlyCountries":["DE","AT"] },
-        { "id":"u626", "aspect":"Red Cylindrical Post Boxes", "confidence":1.0, "onlyCountries":["UK"] },
-        { "id":"u651", "aspect":"Underground Hydrants (Yellow 'H')", "confidence":1.0, "onlyCountries":["UK","BE","NL","LU"] },
-        { "id":"u676", "aspect":"Green LED Pharmacy Cross", "confidence":1.0, "excludeCountries":["US","CA","AU"] }
-    ]},
-    { "category": "Block 8: Advanced Transit Meta", "clues": [ 
-        { "id":"t701", "aspect":"Blue Taxi License Plates", "confidence":1.0, "onlyCountries":["CO","CN"] },
-        { "id":"t726", "aspect":"Jeepneys (Decorated Jeeps)", "confidence":1.0, "onlyCountries":["PH"] },
-        { "id":"t751", "aspect":"Matatus (Graffiti Minibuses)", "confidence":1.0, "onlyCountries":["KE"] },
-        { "id":"t776", "aspect":"Songthaews (Pickup Buses)", "confidence":1.0, "onlyCountries":["TH","LA"] }
-    ]},
-    { "category": "Block 9: Botanical Disqualifiers", "clues": [ 
-        { "id":"b801", "aspect":"Baobab Trees (Thick Trunks)", "confidence":1.0, "onlyCountries":["SN","MG"] },
-        { "id":"b826", "aspect":"Monkey Puzzle Trees (Araucaria)", "confidence":1.0, "onlyCountries":["CL","AR"] },
-        { "id":"b851", "aspect":"Birch Forests (High Density)", "confidence":0.9, "onlyCountries":["RU","NO","SE","FI"] },
-        { "id":"b876", "aspect":"Karoo Scrubland (Dry)", "confidence":1.0, "onlyCountries":["ZA"] }
-    ]},
-    { "category": "Block 10: Signage Typography", "clues": [ 
-        { "id":"s901", "aspect":"DUR Stop Signs", "confidence":1.0, "onlyCountries":["TR"] },
-        { "id":"s926", "aspect":"STOP Signs (In Spanish Area)", "confidence":1.0, "onlyCountries":["ES"] },
-        { "id":"s951", "aspect":"Bilingual Irish/English Signs", "confidence":1.0, "onlyCountries":["IE"] },
-        { "id":"s976", "aspect":"ARRÊT Stop Signs", "confidence":1.0, "onlyCountries":["CA"] }
-    ]}
-  ]
+    "version": "1.1.0",
+    "countries": [
+        {
+            "id": "af",
+            "name": "Afghanistan",
+            "continent": "Asia"
+        },
+        {
+            "id": "al",
+            "name": "Albania",
+            "continent": "Europe"
+        },
+        {
+            "id": "dz",
+            "name": "Algeria",
+            "continent": "Africa"
+        },
+        {
+            "id": "as",
+            "name": "American Samoa",
+            "continent": "Oceania"
+        },
+        {
+            "id": "ad",
+            "name": "Andorra",
+            "continent": "Europe"
+        },
+        {
+            "id": "ao",
+            "name": "Angola",
+            "continent": "Africa"
+        },
+        {
+            "id": "ai",
+            "name": "Anguilla",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "ag",
+            "name": "Antigua and Barbuda",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "ar",
+            "name": "Argentina",
+            "continent": "South America"
+        },
+        {
+            "id": "am",
+            "name": "Armenia",
+            "continent": "Asia"
+        },
+        {
+            "id": "aw",
+            "name": "Aruba",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "au",
+            "name": "Australia",
+            "continent": "Oceania"
+        },
+        {
+            "id": "at",
+            "name": "Austria",
+            "continent": "Europe"
+        },
+        {
+            "id": "az",
+            "name": "Azerbaijan",
+            "continent": "Asia"
+        },
+        {
+            "id": "bs",
+            "name": "Bahamas",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "bh",
+            "name": "Bahrain",
+            "continent": "Asia"
+        },
+        {
+            "id": "bd",
+            "name": "Bangladesh",
+            "continent": "Asia"
+        },
+        {
+            "id": "bb",
+            "name": "Barbados",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "by",
+            "name": "Belarus",
+            "continent": "Europe"
+        },
+        {
+            "id": "be",
+            "name": "Belgium",
+            "continent": "Europe"
+        },
+        {
+            "id": "bz",
+            "name": "Belize",
+            "continent": "Central America"
+        },
+        {
+            "id": "bj",
+            "name": "Benin",
+            "continent": "Africa"
+        },
+        {
+            "id": "bm",
+            "name": "Bermuda",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "bt",
+            "name": "Bhutan",
+            "continent": "Asia"
+        },
+        {
+            "id": "bo",
+            "name": "Bolivia",
+            "continent": "South America"
+        },
+        {
+            "id": "ba",
+            "name": "Bosnia and Herzegovina",
+            "continent": "Europe"
+        },
+        {
+            "id": "bw",
+            "name": "Botswana",
+            "continent": "Africa"
+        },
+        {
+            "id": "br",
+            "name": "Brazil",
+            "continent": "South America"
+        },
+        {
+            "id": "vg",
+            "name": "British Virgin Islands",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "bn",
+            "name": "Brunei",
+            "continent": "Asia"
+        },
+        {
+            "id": "bg",
+            "name": "Bulgaria",
+            "continent": "Europe"
+        },
+        {
+            "id": "bf",
+            "name": "Burkina Faso",
+            "continent": "Africa"
+        },
+        {
+            "id": "bi",
+            "name": "Burundi",
+            "continent": "Africa"
+        },
+        {
+            "id": "cv",
+            "name": "Cabo Verde",
+            "continent": "Africa"
+        },
+        {
+            "id": "kh",
+            "name": "Cambodia",
+            "continent": "Asia"
+        },
+        {
+            "id": "cm",
+            "name": "Cameroon",
+            "continent": "Africa"
+        },
+        {
+            "id": "ca",
+            "name": "Canada",
+            "continent": "North America"
+        },
+        {
+            "id": "ky",
+            "name": "Cayman Islands",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "cf",
+            "name": "Central African Republic",
+            "continent": "Africa"
+        },
+        {
+            "id": "td",
+            "name": "Chad",
+            "continent": "Africa"
+        },
+        {
+            "id": "cl",
+            "name": "Chile",
+            "continent": "South America"
+        },
+        {
+            "id": "cn",
+            "name": "China",
+            "continent": "Asia"
+        },
+        {
+            "id": "cc",
+            "name": "Cocos Islands",
+            "continent": "Oceania"
+        },
+        {
+            "id": "co",
+            "name": "Colombia",
+            "continent": "South America"
+        },
+        {
+            "id": "km",
+            "name": "Comoros",
+            "continent": "Africa"
+        },
+        {
+            "id": "cd",
+            "name": "DR Congo",
+            "continent": "Africa"
+        },
+        {
+            "id": "cg",
+            "name": "Republic of Congo",
+            "continent": "Africa"
+        },
+        {
+            "id": "ck",
+            "name": "Cook Islands",
+            "continent": "Oceania"
+        },
+        {
+            "id": "cr",
+            "name": "Costa Rica",
+            "continent": "Central America"
+        },
+        {
+            "id": "ci",
+            "name": "Côte d’Ivoire",
+            "continent": "Africa"
+        },
+        {
+            "id": "hr",
+            "name": "Croatia",
+            "continent": "Europe"
+        },
+        {
+            "id": "cu",
+            "name": "Cuba",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "cw",
+            "name": "Curaçao",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "cy",
+            "name": "Cyprus",
+            "continent": "Asia"
+        },
+        {
+            "id": "cz",
+            "name": "Czechia",
+            "continent": "Europe"
+        },
+        {
+            "id": "dk",
+            "name": "Denmark",
+            "continent": "Europe"
+        },
+        {
+            "id": "dj",
+            "name": "Djibouti",
+            "continent": "Africa"
+        },
+        {
+            "id": "dm",
+            "name": "Dominica",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "do",
+            "name": "Dominican Republic",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "tl",
+            "name": "East Timor",
+            "continent": "Asia"
+        },
+        {
+            "id": "ec",
+            "name": "Ecuador",
+            "continent": "South America"
+        },
+        {
+            "id": "eg",
+            "name": "Egypt",
+            "continent": "Africa"
+        },
+        {
+            "id": "sv",
+            "name": "El Salvador",
+            "continent": "Central America"
+        },
+        {
+            "id": "gq",
+            "name": "Equatorial Guinea",
+            "continent": "Africa"
+        },
+        {
+            "id": "er",
+            "name": "Eritrea",
+            "continent": "Africa"
+        },
+        {
+            "id": "ee",
+            "name": "Estonia",
+            "continent": "Europe"
+        },
+        {
+            "id": "sz",
+            "name": "Eswatini",
+            "continent": "Africa"
+        },
+        {
+            "id": "et",
+            "name": "Ethiopia",
+            "continent": "Africa"
+        },
+        {
+            "id": "fk",
+            "name": "Falkland Islands",
+            "continent": "South America"
+        },
+        {
+            "id": "fo",
+            "name": "Faroe Islands",
+            "continent": "Europe"
+        },
+        {
+            "id": "fj",
+            "name": "Fiji",
+            "continent": "Oceania"
+        },
+        {
+            "id": "fi",
+            "name": "Finland",
+            "continent": "Europe"
+        },
+        {
+            "id": "fr",
+            "name": "France",
+            "continent": "Europe"
+        },
+        {
+            "id": "gf",
+            "name": "French Guiana",
+            "continent": "South America"
+        },
+        {
+            "id": "pf",
+            "name": "French Polynesia",
+            "continent": "Oceania"
+        },
+        {
+            "id": "ga",
+            "name": "Gabon",
+            "continent": "Africa"
+        },
+        {
+            "id": "gm",
+            "name": "Gambia",
+            "continent": "Africa"
+        },
+        {
+            "id": "gz",
+            "name": "Gaza Strip",
+            "continent": "Asia"
+        },
+        {
+            "id": "ge",
+            "name": "Georgia",
+            "continent": "Asia"
+        },
+        {
+            "id": "de",
+            "name": "Germany",
+            "continent": "Europe"
+        },
+        {
+            "id": "gh",
+            "name": "Ghana",
+            "continent": "Africa"
+        },
+        {
+            "id": "gi",
+            "name": "Gibraltar",
+            "continent": "Europe"
+        },
+        {
+            "id": "gr",
+            "name": "Greece",
+            "continent": "Europe"
+        },
+        {
+            "id": "gl",
+            "name": "Greenland",
+            "continent": "North America"
+        },
+        {
+            "id": "gd",
+            "name": "Grenada",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "gp",
+            "name": "Guadeloupe",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "gu",
+            "name": "Guam",
+            "continent": "Oceania"
+        },
+        {
+            "id": "gt",
+            "name": "Guatemala",
+            "continent": "Central America"
+        },
+        {
+            "id": "gg",
+            "name": "Guernsey",
+            "continent": "Europe"
+        },
+        {
+            "id": "gn",
+            "name": "Guinea",
+            "continent": "Africa"
+        },
+        {
+            "id": "gw",
+            "name": "Guinea-Bissau",
+            "continent": "Africa"
+        },
+        {
+            "id": "gy",
+            "name": "Guyana",
+            "continent": "South America"
+        },
+        {
+            "id": "ht",
+            "name": "Haiti",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "hn",
+            "name": "Honduras",
+            "continent": "Central America"
+        },
+        {
+            "id": "hk",
+            "name": "Hong Kong",
+            "continent": "Asia"
+        },
+        {
+            "id": "hu",
+            "name": "Hungary",
+            "continent": "Europe"
+        },
+        {
+            "id": "is",
+            "name": "Iceland",
+            "continent": "Europe"
+        },
+        {
+            "id": "in",
+            "name": "India",
+            "continent": "Asia"
+        },
+        {
+            "id": "id",
+            "name": "Indonesia",
+            "continent": "Asia"
+        },
+        {
+            "id": "ir",
+            "name": "Iran",
+            "continent": "Asia"
+        },
+        {
+            "id": "iq",
+            "name": "Iraq",
+            "continent": "Asia"
+        },
+        {
+            "id": "ie",
+            "name": "Ireland",
+            "continent": "Europe"
+        },
+        {
+            "id": "im",
+            "name": "Isle of Man",
+            "continent": "Europe"
+        },
+        {
+            "id": "il",
+            "name": "Israel",
+            "continent": "Asia"
+        },
+        {
+            "id": "it",
+            "name": "Italy",
+            "continent": "Europe"
+        },
+        {
+            "id": "jm",
+            "name": "Jamaica",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "jp",
+            "name": "Japan",
+            "continent": "Asia"
+        },
+        {
+            "id": "je",
+            "name": "Jersey",
+            "continent": "Europe"
+        },
+        {
+            "id": "jo",
+            "name": "Jordan",
+            "continent": "Asia"
+        },
+        {
+            "id": "kz",
+            "name": "Kazakhstan",
+            "continent": "Asia"
+        },
+        {
+            "id": "ke",
+            "name": "Kenya",
+            "continent": "Africa"
+        },
+        {
+            "id": "ki",
+            "name": "Kiribati",
+            "continent": "Oceania"
+        },
+        {
+            "id": "kp",
+            "name": "North Korea",
+            "continent": "Asia"
+        },
+        {
+            "id": "kr",
+            "name": "South Korea",
+            "continent": "Asia"
+        },
+        {
+            "id": "ko",
+            "name": "Kosovo",
+            "continent": "Europe"
+        },
+        {
+            "id": "kw",
+            "name": "Kuwait",
+            "continent": "Asia"
+        },
+        {
+            "id": "kg",
+            "name": "Kyrgyzstan",
+            "continent": "Asia"
+        },
+        {
+            "id": "la",
+            "name": "Laos",
+            "continent": "Asia"
+        },
+        {
+            "id": "lv",
+            "name": "Latvia",
+            "continent": "Europe"
+        },
+        {
+            "id": "lb",
+            "name": "Lebanon",
+            "continent": "Asia"
+        },
+        {
+            "id": "ls",
+            "name": "Lesotho",
+            "continent": "Africa"
+        },
+        {
+            "id": "lr",
+            "name": "Liberia",
+            "continent": "Africa"
+        },
+        {
+            "id": "ly",
+            "name": "Libya",
+            "continent": "Africa"
+        },
+        {
+            "id": "li",
+            "name": "Liechtenstein",
+            "continent": "Europe"
+        },
+        {
+            "id": "lt",
+            "name": "Lithuania",
+            "continent": "Europe"
+        },
+        {
+            "id": "lu",
+            "name": "Luxembourg",
+            "continent": "Europe"
+        },
+        {
+            "id": "mo",
+            "name": "Macau",
+            "continent": "Asia"
+        },
+        {
+            "id": "mg",
+            "name": "Madagascar",
+            "continent": "Africa"
+        },
+        {
+            "id": "mw",
+            "name": "Malawi",
+            "continent": "Africa"
+        },
+        {
+            "id": "my",
+            "name": "Malaysia",
+            "continent": "Asia"
+        },
+        {
+            "id": "mv",
+            "name": "Maldives",
+            "continent": "Asia"
+        },
+        {
+            "id": "ml",
+            "name": "Mali",
+            "continent": "Africa"
+        },
+        {
+            "id": "mt",
+            "name": "Malta",
+            "continent": "Europe"
+        },
+        {
+            "id": "mh",
+            "name": "Marshall Islands",
+            "continent": "Oceania"
+        },
+        {
+            "id": "mq",
+            "name": "Martinique",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "mr",
+            "name": "Mauritania",
+            "continent": "Africa"
+        },
+        {
+            "id": "mu",
+            "name": "Mauritius",
+            "continent": "Africa"
+        },
+        {
+            "id": "yt",
+            "name": "Mayotte",
+            "continent": "Africa"
+        },
+        {
+            "id": "mx",
+            "name": "Mexico",
+            "continent": "North America"
+        },
+        {
+            "id": "fm",
+            "name": "Micronesia",
+            "continent": "Oceania"
+        },
+        {
+            "id": "md",
+            "name": "Moldova",
+            "continent": "Europe"
+        },
+        {
+            "id": "mc",
+            "name": "Monaco",
+            "continent": "Europe"
+        },
+        {
+            "id": "mn",
+            "name": "Mongolia",
+            "continent": "Asia"
+        },
+        {
+            "id": "me",
+            "name": "Montenegro",
+            "continent": "Europe"
+        },
+        {
+            "id": "ms",
+            "name": "Montserrat",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "ma",
+            "name": "Morocco",
+            "continent": "Africa"
+        },
+        {
+            "id": "mz",
+            "name": "Mozambique",
+            "continent": "Africa"
+        },
+        {
+            "id": "mm",
+            "name": "Myanmar",
+            "continent": "Asia"
+        },
+        {
+            "id": "na",
+            "name": "Namibia",
+            "continent": "Africa"
+        },
+        {
+            "id": "nr",
+            "name": "Nauru",
+            "continent": "Oceania"
+        },
+        {
+            "id": "np",
+            "name": "Nepal",
+            "continent": "Asia"
+        },
+        {
+            "id": "nl",
+            "name": "Netherlands",
+            "continent": "Europe"
+        },
+        {
+            "id": "nc",
+            "name": "New Caledonia",
+            "continent": "Oceania"
+        },
+        {
+            "id": "nz",
+            "name": "New Zealand",
+            "continent": "Oceania"
+        },
+        {
+            "id": "ni",
+            "name": "Nicaragua",
+            "continent": "Central America"
+        },
+        {
+            "id": "ne",
+            "name": "Niger",
+            "continent": "Africa"
+        },
+        {
+            "id": "ng",
+            "name": "Nigeria",
+            "continent": "Africa"
+        },
+        {
+            "id": "nu",
+            "name": "Niue",
+            "continent": "Oceania"
+        },
+        {
+            "id": "mk",
+            "name": "North Macedonia",
+            "continent": "Europe"
+        },
+        {
+            "id": "mp",
+            "name": "Northern Mariana Islands",
+            "continent": "Oceania"
+        },
+        {
+            "id": "no",
+            "name": "Norway",
+            "continent": "Europe"
+        },
+        {
+            "id": "om",
+            "name": "Oman",
+            "continent": "Asia"
+        },
+        {
+            "id": "pk",
+            "name": "Pakistan",
+            "continent": "Asia"
+        },
+        {
+            "id": "pw",
+            "name": "Palau",
+            "continent": "Oceania"
+        },
+        {
+            "id": "pa",
+            "name": "Panama",
+            "continent": "Central America"
+        },
+        {
+            "id": "pg",
+            "name": "Papua New Guinea",
+            "continent": "Oceania"
+        },
+        {
+            "id": "py",
+            "name": "Paraguay",
+            "continent": "South America"
+        },
+        {
+            "id": "pe",
+            "name": "Peru",
+            "continent": "South America"
+        },
+        {
+            "id": "ph",
+            "name": "Philippines",
+            "continent": "Asia"
+        },
+        {
+            "id": "pn",
+            "name": "Pitcairn Island",
+            "continent": "Oceania"
+        },
+        {
+            "id": "pl",
+            "name": "Poland",
+            "continent": "Europe"
+        },
+        {
+            "id": "pt",
+            "name": "Portugal",
+            "continent": "Europe"
+        },
+        {
+            "id": "pr",
+            "name": "Puerto Rico",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "qa",
+            "name": "Qatar",
+            "continent": "Asia"
+        },
+        {
+            "id": "re",
+            "name": "Réunion",
+            "continent": "Africa"
+        },
+        {
+            "id": "ro",
+            "name": "Romania",
+            "continent": "Europe"
+        },
+        {
+            "id": "ru",
+            "name": "Russia",
+            "continent": "Europe"
+        },
+        {
+            "id": "rw",
+            "name": "Rwanda",
+            "continent": "Africa"
+        },
+        {
+            "id": "sh",
+            "name": "Saint Helena",
+            "continent": "Africa"
+        },
+        {
+            "id": "kn",
+            "name": "Saint Kitts and Nevis",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "lc",
+            "name": "Saint Lucia",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "pm",
+            "name": "Saint-Pierre and Miquelon",
+            "continent": "North America"
+        },
+        {
+            "id": "vc",
+            "name": "Saint Vincent",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "ws",
+            "name": "Samoa",
+            "continent": "Oceania"
+        },
+        {
+            "id": "sm",
+            "name": "San Marino",
+            "continent": "Europe"
+        },
+        {
+            "id": "st",
+            "name": "Sao Tome and Principe",
+            "continent": "Africa"
+        },
+        {
+            "id": "sa",
+            "name": "Saudi Arabia",
+            "continent": "Asia"
+        },
+        {
+            "id": "sn",
+            "name": "Senegal",
+            "continent": "Africa"
+        },
+        {
+            "id": "rs",
+            "name": "Serbia",
+            "continent": "Europe"
+        },
+        {
+            "id": "sc",
+            "name": "Seychelles",
+            "continent": "Africa"
+        },
+        {
+            "id": "sl",
+            "name": "Sierra Leone",
+            "continent": "Africa"
+        },
+        {
+            "id": "sg",
+            "name": "Singapore",
+            "continent": "Asia"
+        },
+        {
+            "id": "sx",
+            "name": "Sint Maarten",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "sk",
+            "name": "Slovakia",
+            "continent": "Europe"
+        },
+        {
+            "id": "si",
+            "name": "Slovenia",
+            "continent": "Europe"
+        },
+        {
+            "id": "sb",
+            "name": "Solomon Islands",
+            "continent": "Oceania"
+        },
+        {
+            "id": "so",
+            "name": "Somalia",
+            "continent": "Africa"
+        },
+        {
+            "id": "za",
+            "name": "South Africa",
+            "continent": "Africa"
+        },
+        {
+            "id": "es",
+            "name": "Spain",
+            "continent": "Europe"
+        },
+        {
+            "id": "lk",
+            "name": "Sri Lanka",
+            "continent": "Asia"
+        },
+        {
+            "id": "ss",
+            "name": "South Sudan",
+            "continent": "Africa"
+        },
+        {
+            "id": "sd",
+            "name": "Sudan",
+            "continent": "Africa"
+        },
+        {
+            "id": "sr",
+            "name": "Suriname",
+            "continent": "South America"
+        },
+        {
+            "id": "se",
+            "name": "Sweden",
+            "continent": "Europe"
+        },
+        {
+            "id": "ch",
+            "name": "Switzerland",
+            "continent": "Europe"
+        },
+        {
+            "id": "sy",
+            "name": "Syria",
+            "continent": "Asia"
+        },
+        {
+            "id": "tw",
+            "name": "Taiwan",
+            "continent": "Asia"
+        },
+        {
+            "id": "tj",
+            "name": "Tajikistan",
+            "continent": "Asia"
+        },
+        {
+            "id": "tz",
+            "name": "Tanzania",
+            "continent": "Africa"
+        },
+        {
+            "id": "th",
+            "name": "Thailand",
+            "continent": "Asia"
+        },
+        {
+            "id": "tg",
+            "name": "Togo",
+            "continent": "Africa"
+        },
+        {
+            "id": "tk",
+            "name": "Tokelau",
+            "continent": "Oceania"
+        },
+        {
+            "id": "to",
+            "name": "Tonga",
+            "continent": "Oceania"
+        },
+        {
+            "id": "tt",
+            "name": "Trinidad and Tobago",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "tn",
+            "name": "Tunisia",
+            "continent": "Africa"
+        },
+        {
+            "id": "tr",
+            "name": "Turkey",
+            "continent": "Europe"
+        },
+        {
+            "id": "tm",
+            "name": "Turkmenistan",
+            "continent": "Asia"
+        },
+        {
+            "id": "tv",
+            "name": "Tuvalu",
+            "continent": "Oceania"
+        },
+        {
+            "id": "tc",
+            "name": "Turks and Caicos",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "ug",
+            "name": "Uganda",
+            "continent": "Africa"
+        },
+        {
+            "id": "ua",
+            "name": "Ukraine",
+            "continent": "Europe"
+        },
+        {
+            "id": "ae",
+            "name": "United Arab Emirates",
+            "continent": "Asia"
+        },
+        {
+            "id": "uk",
+            "name": "United Kingdom",
+            "continent": "Europe"
+        },
+        {
+            "id": "us",
+            "name": "United States",
+            "continent": "North America"
+        },
+        {
+            "id": "vi",
+            "name": "US Virgin Islands",
+            "continent": "Caribbean"
+        },
+        {
+            "id": "uy",
+            "name": "Uruguay",
+            "continent": "South America"
+        },
+        {
+            "id": "uz",
+            "name": "Uzbekistan",
+            "continent": "Asia"
+        },
+        {
+            "id": "vu",
+            "name": "Vanuatu",
+            "continent": "Oceania"
+        },
+        {
+            "id": "va",
+            "name": "Vatican City",
+            "continent": "Europe"
+        },
+        {
+            "id": "ve",
+            "name": "Venezuela",
+            "continent": "South America"
+        },
+        {
+            "id": "vn",
+            "name": "Vietnam",
+            "continent": "Asia"
+        },
+        {
+            "id": "wf",
+            "name": "Wallis and Futuna",
+            "continent": "Oceania"
+        },
+        {
+            "id": "wb",
+            "name": "West Bank",
+            "continent": "Asia"
+        },
+        {
+            "id": "eh",
+            "name": "Western Sahara",
+            "continent": "Africa"
+        },
+        {
+            "id": "ye",
+            "name": "Yemen",
+            "continent": "Asia"
+        },
+        {
+            "id": "zm",
+            "name": "Zambia",
+            "continent": "Africa"
+        },
+        {
+            "id": "zw",
+            "name": "Zimbabwe",
+            "continent": "Africa"
+        }
+    ],
+    "rules": [
+        {
+            "category": "Infrastructure",
+            "clues": [
+                {
+                    "id": "drv-l",
+                    "aspect": "Driving Left",
+                    "onlyCountries": [
+                        "AU",
+                        "BD",
+                        "BW",
+                        "BT",
+                        "BN",
+                        "CY",
+                        "FJ",
+                        "GY",
+                        "HK",
+                        "IN",
+                        "ID",
+                        "IE",
+                        "IM",
+                        "JM",
+                        "JP",
+                        "JE",
+                        "KE",
+                        "KI",
+                        "LS",
+                        "MO",
+                        "MW",
+                        "MY",
+                        "MT",
+                        "MU",
+                        "NA",
+                        "NR",
+                        "NP",
+                        "NZ",
+                        "PK",
+                        "PG",
+                        "WS",
+                        "SC",
+                        "SG",
+                        "SB",
+                        "ZA",
+                        "LK",
+                        "SZ",
+                        "TZ",
+                        "TH",
+                        "TO",
+                        "TT",
+                        "TV",
+                        "UG",
+                        "UK",
+                        "VI",
+                        "ZM",
+                        "ZW"
+                    ]
+                },
+                {
+                    "id": "drv-r",
+                    "aspect": "Driving Right",
+                    "excludeCountries": [
+                        "AU",
+                        "BD",
+                        "BW",
+                        "BT",
+                        "BN",
+                        "CY",
+                        "FJ",
+                        "GY",
+                        "HK",
+                        "IN",
+                        "ID",
+                        "IE",
+                        "IM",
+                        "JM",
+                        "JP",
+                        "JE",
+                        "KE",
+                        "KI",
+                        "LS",
+                        "MO",
+                        "MW",
+                        "MY",
+                        "MT",
+                        "MU",
+                        "NA",
+                        "NR",
+                        "NP",
+                        "NZ",
+                        "PK",
+                        "PG",
+                        "WS",
+                        "SC",
+                        "SG",
+                        "SB",
+                        "ZA",
+                        "LK",
+                        "SZ",
+                        "TZ",
+                        "TH",
+                        "TO",
+                        "TT",
+                        "TV",
+                        "UG",
+                        "UK",
+                        "VI",
+                        "ZM",
+                        "ZW"
+                    ]
+                },
+                {
+                    "id": "meter-dist",
+                    "aspect": "Distance: Meters/Kilometers",
+                    "excludeCountries": [
+                        "US",
+                        "UK",
+                        "LR",
+                        "MM"
+                    ]
+                },
+                {
+                    "id": "mile-dist",
+                    "aspect": "Distance: Miles",
+                    "onlyCountries": [
+                        "US",
+                        "UK",
+                        "LR",
+                        "MM"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "License Plates",
+            "clues": [
+                {
+                    "id": "plt-yel-f",
+                    "aspect": "Yellow Front Plate",
+                    "onlyCountries": [
+                        "UK",
+                        "HK",
+                        "GI",
+                        "NL",
+                        "LU"
+                    ]
+                },
+                {
+                    "id": "plt-yel-r",
+                    "aspect": "Yellow Rear Plate",
+                    "onlyCountries": [
+                        "UK",
+                        "HK",
+                        "GI",
+                        "NL",
+                        "LU",
+                        "FR",
+                        "IE",
+                        "IL",
+                        "PS",
+                        "CO",
+                        "PE",
+                        "EC",
+                        "AU",
+                        "ID",
+                        "MY",
+                        "PT",
+                        "HU",
+                        "CY"
+                    ]
+                },
+                {
+                    "id": "plt-blu-ban",
+                    "aspect": "Blue Euro-band",
+                    "onlyContinents": [
+                        "Europe"
+                    ]
+                },
+                {
+                    "id": "plt-ita",
+                    "aspect": "Blue Both Ends (Italy/Albania/San Marino/France)",
+                    "onlyCountries": [
+                        "IT",
+                        "AL",
+                        "SM",
+                        "FR"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Bollards",
+            "clues": [
+                {
+                    "id": "bol-denmark",
+                    "aspect": "Danish Bollard (Yellow/Black Cap)",
+                    "onlyCountries": [
+                        "DK"
+                    ]
+                },
+                {
+                    "id": "bol-sweden",
+                    "aspect": "Swedish Bollard (Orange Cap)",
+                    "onlyCountries": [
+                        "SE"
+                    ]
+                },
+                {
+                    "id": "bol-poland",
+                    "aspect": "Polish Bollard (Red band, white pole)",
+                    "onlyCountries": [
+                        "PL"
+                    ]
+                },
+                {
+                    "id": "bol-estonia",
+                    "aspect": "Estonian Bollard (Yellow reflector)",
+                    "onlyCountries": [
+                        "EE"
+                    ]
+                },
+                {
+                    "id": "bol-finland",
+                    "aspect": "Finnish Bollard (Horizontal reflector)",
+                    "onlyCountries": [
+                        "FI"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Landscape",
+            "clues": [
+                {
+                    "id": "env-desert",
+                    "aspect": "Desert / Arid Landscape",
+                    "onlyCountries": [
+                        "DZ",
+                        "EG",
+                        "LY",
+                        "MA",
+                        "SD",
+                        "TN",
+                        "EH",
+                        "AE",
+                        "SA",
+                        "OM",
+                        "QA",
+                        "KW",
+                        "JO",
+                        "IL",
+                        "IQ",
+                        "IR",
+                        "AZ",
+                        "TM",
+                        "UZ",
+                        "KZ",
+                        "MN",
+                        "AU",
+                        "NA",
+                        "BW",
+                        "ZA",
+                        "PE",
+                        "CL",
+                        "AR",
+                        "MX",
+                        "US"
+                    ]
+                },
+                {
+                    "id": "env-tropical",
+                    "aspect": "Tropical / Jungle",
+                    "onlyContinents": [
+                        "Central America",
+                        "Caribbean",
+                        "South America",
+                        "Africa",
+                        "Asia",
+                        "Oceania"
+                    ]
+                },
+                {
+                    "id": "env-snow",
+                    "aspect": "Snow / Plowing Lines",
+                    "onlyCountries": [
+                        "CA",
+                        "US",
+                        "RU",
+                        "NO",
+                        "SE",
+                        "FI",
+                        "IS",
+                        "GL",
+                        "AR",
+                        "CL",
+                        "CH",
+                        "AT"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Google Car Meta",
+            "clues": [
+                {
+                    "id": "car-snorkel",
+                    "aspect": "Snorkel (Black / Visible)",
+                    "onlyCountries": [
+                        "KE",
+                        "MN",
+                        "IS",
+                        "VI",
+                        "AS"
+                    ]
+                },
+                {
+                    "id": "car-rack-front",
+                    "aspect": "Roof Rack (Visible Front)",
+                    "onlyCountries": [
+                        "GH",
+                        "GT",
+                        "BD",
+                        "KG",
+                        "LA",
+                        "ME",
+                        "MN",
+                        "PH",
+                        "PR",
+                        "SN"
+                    ]
+                },
+                {
+                    "id": "car-rack-ladder",
+                    "aspect": "Ladder Rack (Front Right)",
+                    "onlyCountries": [
+                        "GH"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Language & Script",
+            "clues": [
+                {
+                    "id": "lang-czech-r",
+                    "aspect": "Letter 'ř' (Forensic Exclusion Matrix)",
+                    "excludeCountries": [
+                        "AL", "AD", "AT", "BY", "BE", "BA", "BG", "HR", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "KO", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "MK", "PL", "NL", "PT", "SK", "RO", "NO", "SM", "RS", "SI", "ES", "SE", "CH", "UK", "UA", "VA", "AF", "AM", "AZ", "BD", "BT", "BN", "KH", "CN", "CY", "GE", "IN", "ID", "IR", "IQ", "IL", "JP", "JO", "KZ", "KW", "KG", "LA", "LB", "MY", "MV", "MN", "MM", "NP", "OM", "PK", "QA", "RU", "SA", "KR", "LK", "SY", "PS", "KP", "PH", "SG", "TW", "TJ", "TH", "TL", "TR", "TM", "AE", "UZ", "VN", "YE", "DZ", "AO", "BJ", "BW", "BF", "BI", "CM", "CV", "CF", "TD", "CG", "KM", "CD", "DJ", "EG", "GQ", "ER", "SZ", "ET", "GA", "GM", "GH", "GN", "GW", "CI", "KE", "LS", "LR", "LY", "MG", "MU", "MW", "ML", "MR", "MA", "MZ", "NA", "NE", "NG", "RW", "ST", "SN", "SL", "SO", "ZA", "SD", "SS", "SC", "TZ", "TG", "EH", "TN", "UG", "ZM", "ZW", "BS", "BZ", "CA", "CR", "CU", "HT", "DO", "SV", "GT", "HN", "JM", "MX", "NI", "PA", "US", "AR", "BO", "BR", "CL", "CO", "EC", "GY", "PY", "PE", "SR", "UY", "VE", "AU", "NR", "FJ", "MH", "FM", "NC", "NZ", "PW", "PG", "SB", "TV", "VU"
+                    ]
+                },
+                {
+                    "id": "lang-polish-l",
+                    "aspect": "Letter 'ł' (Forensic Exclusion Matrix)",
+                    "excludeCountries": [
+                        "AL", "AD", "AT", "BY", "BE", "BA", "BG", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "KO", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "MK", "NL", "PT", "SK", "RO", "NO", "SM", "RS", "SI", "ES", "SE", "CH", "UK", "UA", "VA", "AF", "AM", "AZ", "BD", "BT", "BN", "KH", "CN", "CY", "GE", "IN", "ID", "IR", "IQ", "IL", "JP", "JO", "KZ", "KW", "KG", "LA", "LB", "MY", "MV", "MN", "MM", "NP", "OM", "PK", "QA", "RU", "SA", "KR", "LK", "SY", "PS", "KP", "PH", "SG", "TW", "TJ", "TH", "TL", "TR", "TM", "AE", "UZ", "VN", "YE", "DZ", "AO", "BJ", "BW", "BF", "BI", "CM", "CV", "CF", "TD", "CG", "KM", "CD", "DJ", "EG", "GQ", "ER", "SZ", "ET", "GA", "GM", "GH", "GN", "GW", "CI", "KE", "LS", "LR", "LY", "MG", "MU", "MW", "ML", "MR", "MA", "MZ", "NA", "NE", "NG", "RW", "ST", "SN", "SL", "SO", "ZA", "SD", "SS", "SC", "TZ", "TG", "EH", "TN", "UG", "ZM", "ZW", "BS", "BZ", "CA", "CR", "CU", "HT", "DO", "SV", "GT", "HN", "JM", "MX", "NI", "PA", "US", "AR", "BO", "BR", "CL", "CO", "EC", "GY", "PY", "PE", "SR", "UY", "VE", "AU", "NR", "FJ", "MH", "FM", "NC", "NZ", "PW", "PG", "SB", "TV", "VU"
+                    ]
+                },
+                {
+                    "id": "lang-hangul",
+                    "aspect": "Hangul Script (Forensic Exclusion Matrix)",
+                    "excludeCountries": [
+                        "AL", "AD", "AT", "BY", "BE", "BA", "BG", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "KO", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "MK", "PL", "NL", "PT", "SK", "RO", "NO", "SM", "RS", "SI", "ES", "SE", "CH", "UK", "UA", "VA", "AF", "AM", "AZ", "BD", "BT", "BN", "KH", "CN", "CY", "GE", "IN", "ID", "IR", "IQ", "IL", "JP", "JO", "KZ", "KW", "KG", "LA", "LB", "MY", "MV", "MN", "MM", "NP", "OM", "PK", "QA", "RU", "SA", "KR", "LK", "SY", "PS", "KP", "PH", "SG", "TW", "TJ", "TH", "TL", "TR", "TM", "AE", "UZ", "VN", "YE", "DZ", "AO", "BJ", "BW", "BF", "BI", "CM", "CV", "CF", "TD", "CG", "KM", "CD", "DJ", "EG", "GQ", "ER", "SZ", "ET", "GA", "GM", "GH", "GN", "GW", "CI", "KE", "LS", "LR", "LY", "MG", "MU", "MW", "ML", "MR", "MA", "MZ", "NA", "NE", "NG", "RW", "ST", "SN", "SL", "SO", "ZA", "SD", "SS", "SC", "TZ", "TG", "EH", "TN", "UG", "ZM", "ZW", "BS", "BZ", "CA", "CR", "CU", "HT", "DO", "SV", "GT", "HN", "JM", "MX", "NI", "PA", "US", "AR", "BO", "BR", "CL", "CO", "EC", "GY", "PY", "PE", "SR", "UY", "VE", "AU", "NR", "FJ", "MH", "FM", "NC", "NZ", "PW", "PG", "SB", "TV", "VU"
+                    ]
+                },
+                {
+                    "id": "lang-cyrillic",
+                    "aspect": "Cyrillic Alphabet (Forensic Exclusion Matrix)",
+                    "excludeCountries": [
+                        "AL", "AD", "AT", "BE", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "KO", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "PL", "NL", "PT", "SK", "RO", "NO", "SM", "SI", "ES", "SE", "CH", "UK", "VA", "AF", "AM", "AZ", "BD", "BT", "BN", "KH", "CN", "CY", "GE", "IN", "ID", "IR", "IQ", "IL", "JP", "JO", "KW", "LA", "LB", "MY", "MV", "MM", "NP", "OM", "PK", "QA", "SA", "KR", "LK", "SY", "PS", "KP", "PH", "SG", "TW", "TH", "TL", "TR", "TM", "AE", "UZ", "VN", "YE", "DZ", "AO", "BJ", "BW", "BF", "BI", "CM", "CV", "CF", "TD", "CG", "KM", "CD", "DJ", "EG", "GQ", "ER", "SZ", "ET", "GA", "GM", "GH", "GN", "GW", "CI", "KE", "LS", "LR", "LY", "MG", "MU", "MW", "ML", "MR", "MA", "MZ", "NA", "NE", "NG", "RW", "ST", "SN", "SL", "SO", "ZA", "SD", "SS", "SC", "TZ", "TG", "EH", "TN", "UG", "ZM", "ZW", "BS", "BZ", "CA", "CR", "CU", "HT", "DO", "SV", "GT", "HN", "JM", "MX", "NI", "PA", "US", "AR", "BO", "BR", "CL", "CO", "EC", "GY", "PY", "PE", "SR", "UY", "VE", "AU", "NR", "FJ", "MH", "FM", "NC", "NZ", "PW", "PG", "SB", "TV", "VU"
+                    ]
+                },
+                {
+                    "id": "lang-hebrew",
+                    "aspect": "Hebrew Script (Forensic Exclusion Matrix)",
+                    "excludeCountries": [
+                        "AL", "AD", "AT", "BY", "BE", "BA", "BG", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "KO", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "MK", "PL", "NL", "PT", "SK", "RO", "NO", "SM", "RS", "SI", "ES", "SE", "CH", "UK", "UA", "VA", "AF", "AM", "AZ", "BD", "BT", "BN", "KH", "CN", "CY", "GE", "IN", "ID", "IR", "IQ", "JP", "JO", "KZ", "KW", "KG", "LA", "LB", "MY", "MV", "MN", "MM", "NP", "OM", "PK", "QA", "RU", "SA", "KR", "LK", "SY", "PS", "KP", "PH", "SG", "TW", "TJ", "TH", "TL", "TR", "TM", "AE", "UZ", "VN", "YE", "DZ", "AO", "BJ", "BW", "BF", "BI", "CM", "CV", "CF", "TD", "CG", "KM", "CD", "DJ", "EG", "GQ", "ER", "SZ", "ET", "GA", "GM", "GH", "GN", "GW", "CI", "KE", "LS", "LR", "LY", "MG", "MU", "MW", "ML", "MR", "MA", "MZ", "NA", "NE", "NG", "RW", "ST", "SN", "SL", "SO", "ZA", "SD", "SS", "SC", "TZ", "TG", "EH", "TN", "UG", "ZM", "ZW", "BS", "BZ", "CA", "CR", "CU", "HT", "DO", "SV", "GT", "HN", "JM", "MX", "NI", "PA", "US", "AR", "BO", "BR", "CL", "CO", "EC", "GY", "PY", "PE", "SR", "UY", "VE", "AU", "NR", "FJ", "MH", "FM", "NC", "NZ", "PW", "PG", "SB", "TV", "VU"
+                    ]
+                },
+                {
+                    "id": "lang-arabic",
+                    "aspect": "Arabic Script (Forensic Exclusion Matrix)",
+                    "excludeCountries": [
+                        "AL", "AD", "AT", "BY", "BE", "BA", "BG", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "KO", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "MK", "PL", "NL", "PT", "SK", "RO", "NO", "SM", "RS", "SI", "ES", "SE", "CH", "UK", "UA", "VA", "AM", "AZ", "BD", "BT", "BN", "KH", "CN", "CY", "GE", "IN", "ID", "IL", "JP", "KZ", "KG", "LA", "MY", "MV", "MN", "MM", "NP", "RU", "KR", "LK", "KP", "PH", "SG", "TW", "TJ", "TH", "TL", "TR", "TM", "UZ", "VN", "AO", "BJ", "BW", "BF", "BI", "CM", "CV", "CF", "TD", "CG", "KM", "CD", "DJ", "GQ", "ER", "SZ", "ET", "GA", "GM", "GH", "GN", "GW", "CI", "KE", "LS", "LR", "LY", "MG", "MU", "MW", "ML", "MZ", "NA", "NE", "NG", "RW", "ST", "SN", "SL", "ZA", "SS", "SC", "TZ", "TG", "UG", "ZM", "ZW", "BS", "BZ", "CA", "CR", "CU", "HT", "DO", "SV", "GT", "HN", "JM", "MX", "NI", "PA", "US", "AR", "BO", "BR", "CL", "CO", "EC", "GY", "PY", "PE", "SR", "UY", "VE", "AU", "NR", "FJ", "MH", "FM", "NC", "NZ", "PW", "PG", "SB", "TV", "VU"
+                    ]
+                },
+                {
+                    "id": "lang-thai",
+                    "aspect": "Thai Script (Forensic Exclusion Matrix)",
+                    "excludeCountries": [
+                        "AL", "AD", "AT", "BY", "BE", "BA", "BG", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "KO", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "MK", "PL", "NL"
+                    ]
+                },
+                {
+                    "id": "lang-hungary-ou",
+                    "aspect": "Letters 'ő' or 'ű' (Forensic Exclusion Matrix)",
+                    "excludeCountries": [
+                        "AL", "AD", "AT", "BY", "BE", "BA", "BG", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "IS", "IE", "IT", "KO", "LV", "LI", "LT", "LU", "MT", "MD", "MC", "ME", "MK", "PL", "NL", "PT", "SK", "RO", "NO", "SM", "RS", "SI", "ES", "SE", "CH", "UK", "UA", "VA", "AF", "AM", "AZ", "BD", "BT", "BN", "KH", "CN", "CY", "GE", "IN", "ID", "IR", "IQ", "IL", "JP", "JO", "KZ", "KW", "KG", "LA", "LB", "MY", "MV", "MN", "MM", "NP", "OM", "PK", "QA", "RU", "SA", "KR", "LK", "SY", "PS", "KP", "PH", "SG", "TW", "TJ", "TH", "TL", "TR", "TM", "AE", "UZ", "VN", "YE", "DZ", "AO", "BJ", "BW", "BF", "BI", "CM", "CV", "CF", "TD", "CG", "KM", "CD", "DJ", "EG", "GQ", "ER", "SZ", "ET", "GA", "GM", "GH", "GN", "GW", "CI", "KE", "LS", "LR", "LY", "MG", "MU", "MW", "ML", "MR", "MA", "MZ", "NA", "NE", "NG", "RW", "ST", "SN", "SL", "SO", "ZA", "SD", "SS", "SC", "TZ", "TG", "EH", "TN", "UG", "ZM", "ZW", "BS", "BZ", "CA", "CR", "CU", "HT", "DO", "SV", "GT", "HN", "JM", "MX", "NI", "PA", "US", "AR", "BO", "BR", "CL", "CO", "EC", "GY", "PY", "PE", "SR", "UY", "VE", "AU", "NR", "FJ", "MH", "FM", "NC", "NZ", "PW", "PG", "SB", "TV", "VU"
+                    ]
+                },
+                {
+                    "id": "lang-nordic-ae",
+                    "aspect": "Letter 'æ' (Norway/Denmark)",
+                    "onlyCountries": [
+                        "NO",
+                        "DK",
+                        "FO"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Continents",
+            "clues": [
+                {
+                    "id": "cont-eu",
+                    "aspect": "Europe",
+                    "onlyContinents": [
+                        "Europe"
+                    ]
+                },
+                {
+                    "id": "cont-as",
+                    "aspect": "Asia",
+                    "onlyContinents": [
+                        "Asia"
+                    ]
+                },
+                {
+                    "id": "cont-af",
+                    "aspect": "Africa",
+                    "onlyContinents": [
+                        "Africa"
+                    ]
+                },
+                {
+                    "id": "cont-na",
+                    "aspect": "North America",
+                    "onlyContinents": [
+                        "North America",
+                        "Central America",
+                        "Caribbean"
+                    ]
+                },
+                {
+                    "id": "cont-sa",
+                    "aspect": "South America",
+                    "onlyContinents": [
+                        "South America"
+                    ]
+                },
+                {
+                    "id": "cont-oc",
+                    "aspect": "Oceania",
+                    "onlyContinents": [
+                        "Oceania"
+                    ]
+                }
+            ]
+        }
+    ]
 }

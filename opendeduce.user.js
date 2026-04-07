@@ -83,13 +83,14 @@
 
             suspects.forEach(s => {
                 let isMatch = true;
-                if(rule.onlyCountries?.length > 0) { if(!rule.onlyCountries.includes(s.id.toUpperCase())) isMatch = false; }
-                else {
-                    if(rule.excludeContinents?.includes(s.continent)) isMatch = false;
-                    if(rule.excludeCountries?.includes(s.id.toUpperCase())) isMatch = false;
-                }
+                const countryId = s.id.toUpperCase();
 
-                // Hard-Lock logic: If it locks to a specific pool, anything else goes to 0
+                if (rule.onlyCountries?.length > 0 && !rule.onlyCountries.includes(countryId)) isMatch = false;
+                if (rule.onlyContinents?.length > 0 && !rule.onlyContinents.includes(s.continent)) isMatch = false;
+                if (rule.excludeCountries?.length > 0 && rule.excludeCountries.includes(countryId)) isMatch = false;
+                if (rule.excludeContinents?.length > 0 && rule.excludeContinents.includes(s.continent)) isMatch = false;
+
+                // Hard-Lock logic: If it doesn't match this clue, it's out
                 if (!isMatch) s.weight = 0;
             });
         });
