@@ -1,36 +1,38 @@
 {
   "version": "1.0.0",
   "countries": [
-     {"id":"cz","name":"Czechia","continent":"Europe"},{"id":"hu","name":"Hungary","continent":"Europe"},{"id":"pl","name":"Poland","continent":"Europe"},{"id":"kr","name":"South Korea","continent":"Asia"},{"id":"tr","name":"Turkey","continent":"Europe"},{"id":"no","name":"Norway","continent":"Europe"},{"id":"dk","name":"Denmark","continent":"Europe"},{"id":"ru","name":"Russia","continent":"Asia"},{"id":"uk","name":"United Kingdom","continent":"Europe"},{"id":"se","name":"Sweden","continent":"Europe"},{"id":"is","name":"Iceland","continent":"Europe"},{"id":"ie","name":"Ireland","continent":"Europe"},{"id":"us","name":"United States","continent":"North America"},{"id":"ca","name":"Canada","continent":"North America"},{"id":"mx","name":"Mexico","continent":"North America"},{"id":"br","name":"Brazil","continent":"South America"},{"id":"cl","name":"Chile","continent":"South America"},{"id":"ar","name":"Argentina","continent":"South America"},{"id":"za","name":"South Africa","continent":"Africa"},{"id":"au","name":"Australia","continent":"Oceania"},{"id":"nz","name":"New Zealand","continent":"Oceania"},{"id":"id","name":"Indonesia","continent":"Asia"},{"id":"th","name":"Thailand","continent":"Asia"},{"id":"jp","name":"Japan","continent":"Asia"},{"id":"fr","name":"France","continent":"Europe"},{"id":"de","name":"Germany","continent":"Europe"},{"id":"es","name":"Spain","continent":"Europe"},{"id":"ro","name":"Romania","continent":"Europe"},{"id":"sk","name":"Slovakia","continent":"Europe"},{"id":"fi","name":"Finland","continent":"Europe"},{"id":"gr","name":"Greece","continent":"Europe"},{"id":"ph","name":"Philippines","continent":"Asia"},{"id":"ke","name":"Kenya","continent":"Africa"},{"id":"la","name":"Laos","continent":"Asia"},{"id":"at","name":"Austria","continent":"Europe"}
+    {"id":"al","name":"Albania","continent":"Europe"},{"id":"ad","name":"Andorra","continent":"Europe"},{"id":"at","name":"Austria","continent":"Europe"},{"id":"by","name":"Belarus","continent":"Europe"},{"id":"be","name":"Belgium","continent":"Europe"},{"id":"ba","name":"Bosnia and Herzegovina","continent":"Europe"},{"id":"bg","name":"Bulgaria","continent":"Europe"},{"id":"hr","name":"Croatia","continent":"Europe"},{"id":"cz","name":"Czechia","continent":"Europe"},{"id":"dk","name":"Denmark","continent":"Europe"},{"id":"ee","name":"Estonia","continent":"Europe"},{"id":"fi","name":"Finland","continent":"Europe"},{"id":"fr","name":"France","continent":"Europe"},{"id":"de","name":"Germany","continent":"Europe"},{"id":"gr","name":"Greece","continent":"Europe"},{"id":"hu","name":"Hungary","continent":"Europe"},{"id":"is","name":"Iceland","continent":"Europe"},{"id":"ie","name":"Ireland","continent":"Europe"},{"id":"it","name":"Italy","continent":"Europe"},{"id":"lv","name":"Latvia","continent":"Europe"},{"id":"lt","name":"Lithuania","continent":"Europe"},{"id":"nl","name":"Netherlands","continent":"Europe"},{"id":"no","name":"Norway","continent":"Europe"},{"id":"pl","name":"Poland","continent":"Europe"},{"id":"pt","name":"Portugal","continent":"Europe"},{"id":"ro","name":"Romania","continent":"Europe"},{"id":"ru","name":"Russia","continent":"Asia"},{"id":"sk","name":"Slovakia","continent":"Europe"},{"id":"es","name":"Spain","continent":"Europe"},{"id":"se","name":"Sweden","continent":"Europe"},{"id":"ch","name":"Switzerland","continent":"Europe"},{"id":"tr","name":"Turkey","continent":"Europe"},{"id":"uk","name":"United Kingdom","continent":"Europe"},{"id":"ua","name":"Ukraine","continent":"Europe"},{"id":"us","name":"United States","continent":"North America"},{"id":"ca","name":"Canada","continent":"North America"},{"id":"mx","name":"Mexico","continent":"North America"},{"id":"br","name":"Brazil","continent":"South America"},{"id":"ar","name":"Argentina","continent":"South America"},{"id":"cl","name":"Chile","continent":"South America"},{"id":"za","name":"South Africa","continent":"Africa"},{"id":"au","name":"Australia","continent":"Oceania"},{"id":"nz","name":"New Zealand","continent":"Oceania"},{"id":"id","name":"Indonesia","continent":"Asia"},{"id":"th","name":"Thailand","continent":"Asia"},{"id":"jp","name":"Japan","continent":"Asia"},{"id":"my","name":"Malaysia","continent":"Asia"},{"id":"ph","name":"Philippines","continent":"Asia"},{"id":"ke","name":"Kenya","continent":"Africa"}
   ],
   "rules": [
-    { "category": "Block 6: Architecture Dead-Drop", "clues": [ 
-        { "id":"a501", "aspect":"Falun Red Walls / White Trim", "confidence":1.0, "onlyCountries":["SE","FI"] },
+    { "category": "Block 6: Architectural Dead-Drop", "clues": [ 
+        { "id":"a501", "aspect":"Falun Red Walls w/ White Trim", "confidence":1.0, "onlyCountries":["SE","FI"] },
         { "id":"a526", "aspect":"Blue-domed white houses", "confidence":1.0, "onlyCountries":["GR"] },
-        { "id":"a551", "aspect":"Soviet Commieblocks (Brutalist)", "confidence":0.95, "excludeCountries":["US","CA","AU","NZ"] }
+        { "id":"a551", "aspect":"Soviet Commieblocks (Brutalist)", "confidence":0.7, "excludeCountries":["US","CA","AU","NZ"] },
+        { "id":"a576", "aspect":"Exposed Rebar on flat roofs", "confidence":0.8, "excludeCountries":["UK","DE","CH"] }
     ]},
-    { "category": "Block 7: Utility Forensics", "clues": [ 
-        { "id":"u601", "aspect":"Yellow 'H' Bus Stop (Haltestelle)", "confidence":1.0, "onlyCountries":["DE","AT"] },
-        { "id":"u626", "aspect":"Red Cylindrical Post Box", "confidence":1.0, "onlyCountries":["UK"] },
-        { "id":"u651", "aspect":"Underground Fire Hydrant (Yellow H)", "confidence":0.9, "onlyCountries":["UK","IE"] }
+    { "category": "Block 7: Utility & Street Furniture", "clues": [ 
+        { "id":"u601", "aspect":"Yellow 'H' Bus Stop Sign", "confidence":1.0, "onlyCountries":["DE","AT"] },
+        { "id":"u626", "aspect":"Red Cylindrical Post Boxes", "confidence":1.0, "onlyCountries":["UK"] },
+        { "id":"u651", "aspect":"Underground Hydrants (Yellow 'H')", "confidence":1.0, "onlyCountries":["UK","BE","NL","LU"] },
+        { "id":"u676", "aspect":"Green LED Pharmacy Cross", "confidence":1.0, "excludeCountries":["US","CA","AU"] }
     ]},
     { "category": "Block 8: Advanced Transit Meta", "clues": [ 
-        { "id":"t701", "aspect":"Blue Taxi License Plate", "confidence":1.0, "onlyCountries":["CO","CN"] },
+        { "id":"t701", "aspect":"Blue Taxi License Plates", "confidence":1.0, "onlyCountries":["CO","CN"] },
         { "id":"t726", "aspect":"Jeepneys (Decorated Jeeps)", "confidence":1.0, "onlyCountries":["PH"] },
         { "id":"t751", "aspect":"Matatus (Graffiti Minibuses)", "confidence":1.0, "onlyCountries":["KE"] },
-        { "id":"t776", "aspect":"Songthaews (Pickup-truck bus)", "confidence":1.0, "onlyCountries":["TH","LA"] }
+        { "id":"t776", "aspect":"Songthaews (Pickup Buses)", "confidence":1.0, "onlyCountries":["TH","LA"] }
     ]},
     { "category": "Block 9: Botanical Disqualifiers", "clues": [ 
-        { "id":"b801", "aspect":"Baobab Trees (Massive trunk)", "confidence":1.0, "onlyCountries":["SN","MG"] },
+        { "id":"b801", "aspect":"Baobab Trees (Thick Trunks)", "confidence":1.0, "onlyCountries":["SN","MG"] },
         { "id":"b826", "aspect":"Monkey Puzzle Trees (Araucaria)", "confidence":1.0, "onlyCountries":["CL","AR"] },
-        { "id":"b851", "aspect":"Birch Tree Forests (High density)", "confidence":1.0, "onlyCountries":["RU","NO","SE","FI"] },
-        { "id":"b876", "aspect":"Karoo Scrubland (Dry low bush)", "confidence":1.0, "onlyCountries":["ZA"] }
+        { "id":"b851", "aspect":"Birch Forests (High Density)", "confidence":0.9, "onlyCountries":["RU","NO","SE","FI"] },
+        { "id":"b876", "aspect":"Karoo Scrubland (Dry)", "confidence":1.0, "onlyCountries":["ZA"] }
     ]},
     { "category": "Block 10: Signage Typography", "clues": [ 
-        { "id":"s901", "aspect":"DUR Stop Sign", "confidence":1.0, "onlyCountries":["TR"] },
-        { "id":"s926", "aspect":"STOP sign (Spanish Area)", "confidence":1.0, "onlyCountries":["ES"] },
-        { "id":"s951", "aspect":"Bilingual Irish/English Signage", "confidence":1.0, "onlyCountries":["IE"] },
-        { "id":"s976", "aspect":"ARRÊT Stop Sign", "confidence":1.0, "onlyCountries":["CA"] }
+        { "id":"s901", "aspect":"DUR Stop Signs", "confidence":1.0, "onlyCountries":["TR"] },
+        { "id":"s926", "aspect":"STOP Signs (In Spanish Area)", "confidence":1.0, "onlyCountries":["ES"] },
+        { "id":"s951", "aspect":"Bilingual Irish/English Signs", "confidence":1.0, "onlyCountries":["IE"] },
+        { "id":"s976", "aspect":"ARRÊT Stop Signs", "confidence":1.0, "onlyCountries":["CA"] }
     ]}
   ]
 }
