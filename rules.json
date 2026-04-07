@@ -1,43 +1,36 @@
 {
   "version": "1.0.0",
   "countries": [
-    {"id":"cz","name":"Czechia","continent":"Europe"},{"id":"hu","name":"Hungary","continent":"Europe"},{"id":"pl","name":"Poland","continent":"Europe"},{"id":"kr","name":"South Korea","continent":"Asia"},{"id":"ua","name":"Ukraine","continent":"Europe"},{"id":"tr","name":"Turkey","continent":"Europe"},{"id":"no","name":"Norway","continent":"Europe"},{"id":"dk","name":"Denmark","continent":"Europe"},{"id":"ru","name":"Russia","continent":"Asia"},{"id":"uk","name":"United Kingdom","continent":"Europe"},{"id":"se","name":"Sweden","continent":"Europe"},{"id":"is","name":"Iceland","continent":"Europe"},{"id":"ch","name":"Switzerland","continent":"Europe"},{"id":"us","name":"United States","continent":"North America"},{"id":"ca","name":"Canada","continent":"North America"},{"id":"mx","name":"Mexico","continent":"North America"},{"id":"br","name":"Brazil","continent":"South America"},{"id":"cl","name":"Chile","continent":"South America"},{"id":"ar","name":"Argentina","continent":"South America"},{"id":"za","name":"South Africa","continent":"Africa"},{"id":"au","name":"Australia","continent":"Oceania"},{"id":"nz","name":"New Zealand","continent":"Oceania"},{"id":"id","name":"Indonesia","continent":"Asia"},{"id":"th","name":"Thailand","continent":"Asia"},{"id":"jp","name":"Japan","continent":"Asia"},{"id":"fr","name":"France","continent":"Europe"},{"id":"de","name":"Germany","continent":"Europe"},{"id":"es","name":"Spain","continent":"Europe"},{"id":"ro","name":"Romania","continent":"Europe"},{"id":"sk","name":"Slovakia","continent":"Europe"},{"id":"fi","name":"Finland","continent":"Europe"}
+     {"id":"cz","name":"Czechia","continent":"Europe"},{"id":"hu","name":"Hungary","continent":"Europe"},{"id":"pl","name":"Poland","continent":"Europe"},{"id":"kr","name":"South Korea","continent":"Asia"},{"id":"tr","name":"Turkey","continent":"Europe"},{"id":"no","name":"Norway","continent":"Europe"},{"id":"dk","name":"Denmark","continent":"Europe"},{"id":"ru","name":"Russia","continent":"Asia"},{"id":"uk","name":"United Kingdom","continent":"Europe"},{"id":"se","name":"Sweden","continent":"Europe"},{"id":"is","name":"Iceland","continent":"Europe"},{"id":"ie","name":"Ireland","continent":"Europe"},{"id":"us","name":"United States","continent":"North America"},{"id":"ca","name":"Canada","continent":"North America"},{"id":"mx","name":"Mexico","continent":"North America"},{"id":"br","name":"Brazil","continent":"South America"},{"id":"cl","name":"Chile","continent":"South America"},{"id":"ar","name":"Argentina","continent":"South America"},{"id":"za","name":"South Africa","continent":"Africa"},{"id":"au","name":"Australia","continent":"Oceania"},{"id":"nz","name":"New Zealand","continent":"Oceania"},{"id":"id","name":"Indonesia","continent":"Asia"},{"id":"th","name":"Thailand","continent":"Asia"},{"id":"jp","name":"Japan","continent":"Asia"},{"id":"fr","name":"France","continent":"Europe"},{"id":"de","name":"Germany","continent":"Europe"},{"id":"es","name":"Spain","continent":"Europe"},{"id":"ro","name":"Romania","continent":"Europe"},{"id":"sk","name":"Slovakia","continent":"Europe"},{"id":"fi","name":"Finland","continent":"Europe"},{"id":"gr","name":"Greece","continent":"Europe"},{"id":"ph","name":"Philippines","continent":"Asia"},{"id":"ke","name":"Kenya","continent":"Africa"},{"id":"la","name":"Laos","continent":"Asia"},{"id":"at","name":"Austria","continent":"Europe"}
   ],
   "rules": [
-    { "category": "Block 1: Linguistic Scalpel", "clues": [ 
-        { "id":"l1", "aspect":"Letter 'ř'", "confidence":1.0, "onlyCountries":["CZ"] },
-        { "id":"l2", "aspect":"Letter 'ő' or 'ű'", "confidence":1.0, "onlyCountries":["HU"] },
-        { "id":"l3", "aspect":"Letter 'ł'", "confidence":1.0, "onlyCountries":["PL"] },
-        { "id":"l4", "aspect":"Hangul (Circles/Blocks)", "confidence":1.0, "onlyCountries":["KR"] },
-        { "id":"l5", "aspect":"Letter 'ø' or 'æ'", "confidence":1.0, "onlyCountries":["NO","DK"] },
-        { "id":"l6", "aspect":"Letter 'ğ'", "confidence":1.0, "onlyCountries":["TR"] }
+    { "category": "Block 6: Architecture Dead-Drop", "clues": [ 
+        { "id":"a501", "aspect":"Falun Red Walls / White Trim", "confidence":1.0, "onlyCountries":["SE","FI"] },
+        { "id":"a526", "aspect":"Blue-domed white houses", "confidence":1.0, "onlyCountries":["GR"] },
+        { "id":"a551", "aspect":"Soviet Commieblocks (Brutalist)", "confidence":0.95, "excludeCountries":["US","CA","AU","NZ"] }
     ]},
-    { "category": "Block 2: Road Forensics", "clues": [ 
-        { "id":"r101", "aspect":"Solid Double Yellow Center", "confidence":1.0, "excludeCountries":["UK","FR","DE","ES"] },
-        { "id":"r116", "aspect":"Dashed Yellow Outer Lines", "confidence":1.0, "onlyCountries":["SE"] },
-        { "id":"r131", "aspect":"Zig-Zag Crosswalk Lines", "confidence":1.0, "onlyCountries":["UK"] },
-        { "id":"r161", "aspect":"Yellow Center + Yellow Edge", "confidence":1.0, "excludeContinents":["Europe"], "excludeCountries":["RU"] },
-        { "id":"r176", "aspect":"Road Text: 'SLOW'", "confidence":0.95, "excludeCountries":["MX","BR"] }
+    { "category": "Block 7: Utility Forensics", "clues": [ 
+        { "id":"u601", "aspect":"Yellow 'H' Bus Stop (Haltestelle)", "confidence":1.0, "onlyCountries":["DE","AT"] },
+        { "id":"u626", "aspect":"Red Cylindrical Post Box", "confidence":1.0, "onlyCountries":["UK"] },
+        { "id":"u651", "aspect":"Underground Fire Hydrant (Yellow H)", "confidence":0.9, "onlyCountries":["UK","IE"] }
     ]},
-    { "category": "Block 3: Infrastructure Gates", "clues": [ 
-        { "id":"p201", "aspect":"A-Frame Concrete Poles", "confidence":1.0, "excludeCountries":["US","CA","UK","JP"] },
-        { "id":"p216", "aspect":"Hole-Poles (Rectangular)", "confidence":1.0, "excludeCountries":["FR","UK","DE"] },
-        { "id":"p231", "aspect":"Wooden Trident Poles", "confidence":1.0, "onlyCountries":["US","CA","MX"] },
-        { "id":"p246", "aspect":"Stobie Poles (Steel/Conc)", "confidence":1.0, "onlyCountries":["AU"] },
-        { "id":"p286", "aspect":"Concrete Poles w/ 6+ Holes", "confidence":0.95, "onlyCountries":["RO","HU"] }
+    { "category": "Block 8: Advanced Transit Meta", "clues": [ 
+        { "id":"t701", "aspect":"Blue Taxi License Plate", "confidence":1.0, "onlyCountries":["CO","CN"] },
+        { "id":"t726", "aspect":"Jeepneys (Decorated Jeeps)", "confidence":1.0, "onlyCountries":["PH"] },
+        { "id":"t751", "aspect":"Matatus (Graffiti Minibuses)", "confidence":1.0, "onlyCountries":["KE"] },
+        { "id":"t776", "aspect":"Songthaews (Pickup-truck bus)", "confidence":1.0, "onlyCountries":["TH","LA"] }
     ]},
-    { "category": "Block 4: Commercial Hard-Locks", "clues": [ 
-        { "id":"c301", "aspect":"Domain .co.za", "confidence":1.0, "onlyCountries":["ZA"] },
-        { "id":"c316", "aspect":"Domain .com.br", "confidence":1.0, "onlyCountries":["BR"] },
-        { "id":"c331", "aspect":"ALTO Stop Sign", "confidence":1.0, "excludeCountries":["ES","US","BR"] },
-        { "id":"c361", "aspect":"Oxxo Store", "confidence":1.0, "onlyCountries":["MX","CO","CL"] },
-        { "id":"c386", "aspect":"Yellow 'H' Bus Stop", "confidence":1.0, "onlyCountries":["DE","AT"] }
+    { "category": "Block 9: Botanical Disqualifiers", "clues": [ 
+        { "id":"b801", "aspect":"Baobab Trees (Massive trunk)", "confidence":1.0, "onlyCountries":["SN","MG"] },
+        { "id":"b826", "aspect":"Monkey Puzzle Trees (Araucaria)", "confidence":1.0, "onlyCountries":["CL","AR"] },
+        { "id":"b851", "aspect":"Birch Tree Forests (High density)", "confidence":1.0, "onlyCountries":["RU","NO","SE","FI"] },
+        { "id":"b876", "aspect":"Karoo Scrubland (Dry low bush)", "confidence":1.0, "onlyCountries":["ZA"] }
     ]},
-    { "category": "Block 5: Environmental Barriers", "clues": [ 
-        { "id":"e401", "aspect":"Baobab Trees", "confidence":1.0, "onlyCountries":["SN","MG"] },
-        { "id":"e416", "aspect":"Monkey Puzzle Trees", "confidence":1.0, "onlyCountries":["CL","AR"] },
-        { "id":"e431", "aspect":"Treeless Tundra (Flat)", "confidence":1.0, "onlyCountries":["IS"] },
-        { "id":"e446", "aspect":"Terraced Rice Paddies", "confidence":1.0, "onlyCountries":["VN","ID","TH","PH","JP"] }
+    { "category": "Block 10: Signage Typography", "clues": [ 
+        { "id":"s901", "aspect":"DUR Stop Sign", "confidence":1.0, "onlyCountries":["TR"] },
+        { "id":"s926", "aspect":"STOP sign (Spanish Area)", "confidence":1.0, "onlyCountries":["ES"] },
+        { "id":"s951", "aspect":"Bilingual Irish/English Signage", "confidence":1.0, "onlyCountries":["IE"] },
+        { "id":"s976", "aspect":"ARRÊT Stop Sign", "confidence":1.0, "onlyCountries":["CA"] }
     ]}
   ]
 }
