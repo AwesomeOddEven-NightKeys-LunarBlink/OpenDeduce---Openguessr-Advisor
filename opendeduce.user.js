@@ -74,7 +74,7 @@
         const container = document.querySelector('.od-suspect-list'), meter = document.getElementById('od-meter'), countText = document.getElementById('od-count');
         if (!container) return;
 
-        // Equal-Divide start: every country has weight 1.0
+        // Base weight: 1.0 for all countries
         const suspects = STATE.countries.map(c => ({...c, weight: 1.0}));
 
         STATE.activeClueIds.forEach(id => {
@@ -82,20 +82,29 @@
             if (!rule) return;
 
             suspects.forEach(s => {
-                let isMatch = true;
                 const countryId = s.id.toUpperCase();
 
+                // Soft-Boost Logic (bayesian weight)
+                if (rule.likelyCountries?.length > 0) {
+                    if (rule.likelyCountries.includes(countryId)) {
+                        s.weight *= 20; // 20x probability boost
+                    } else {
+                        s.weight *= 0.5; // Slight penalty for non-targets
+                    }
+                }
+
+                // Hard-Lock Logic (legacy/mandatory)
+                let isMatch = true;
                 if (rule.onlyCountries?.length > 0 && !rule.onlyCountries.includes(countryId)) isMatch = false;
                 if (rule.onlyContinents?.length > 0 && !rule.onlyContinents.includes(s.continent)) isMatch = false;
                 if (rule.excludeCountries?.length > 0 && rule.excludeCountries.includes(countryId)) isMatch = false;
                 if (rule.excludeContinents?.length > 0 && rule.excludeContinents.includes(s.continent)) isMatch = false;
 
-                // Hard-Lock logic: If it doesn't match this clue, it's out
                 if (!isMatch) s.weight = 0;
             });
         });
 
-        // Bayesian Redistribute: Probability = (Country Weight / Sum of all weights) * 100
+        // Normalize and Redistribute
         const totalWeight = suspects.reduce((acc, s) => acc + s.weight, 0);
         const sorted = suspects.map(s => ({
             ...s,
@@ -105,7 +114,6 @@
         const hiProb = sorted.filter(s => s.prob > 1).length;
         countText.innerText = `${hiProb} Forensic Suspects`;
         
-        // Progress Meter: based on survivors vs total world
         const survivors = sorted.filter(s => s.prob > 0).length;
         meter.style.width = ((survivors / STATE.countries.length) * 100) + '%';
 
