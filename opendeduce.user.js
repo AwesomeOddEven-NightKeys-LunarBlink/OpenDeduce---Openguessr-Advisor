@@ -93,8 +93,21 @@
         .od-suspect-list { max-height: 200px; overflow-y: auto; scrollbar-width: thin; }
         .od-suspect-row { display: flex; justify-content: space-between; padding: 10px 8px; border-radius: 12px; font-size: 0.95rem; margin-bottom: 4px; transition: 0.2s; }
         .od-score { font-family: 'JetBrains Mono'; font-weight: 800; color: #10b981; }
-        .od-advice-box { padding: 12px 24px; font-size: 0.75rem; border-top: 1px solid #ffffff08; background: #ffffff03; color: #94a3b8; }
-        .od-advice-tag { color: #60a5fa; font-weight: 800; cursor: pointer; }
+        .od-advice-box { padding: 12px 24px; font-size: 0.75rem; border-top: 1px solid #ffffff08; background: #ffffff03; color: #94a3b8; line-height: 1.6; }
+        .od-advice-tag { color: #60a5fa; font-weight: 800; cursor: pointer; text-decoration: underline; }
+        .od-diff-btn { 
+            margin-top: 8px; padding: 6px 12px; background: rgba(96,165,250,0.15); 
+            border: 1px solid #60a5fa44; border-radius: 8px; color: #60a5fa; 
+            font-size: 0.65rem; font-weight: 800; cursor: pointer; transition: 0.2s;
+            display: inline-block;
+        }
+        .od-diff-btn:hover { background: #60a5fa33; border-color: #60a5fa; transform: translateY(-1px); }
+        .od-diff-item {
+            padding: 8px; border-bottom: 1px solid #ffffff08; display: flex; align-items: center; gap: 10px;
+        }
+        .od-diff-meta { flex: 1; }
+        .od-diff-aspect { font-size: 0.7rem; font-weight: 700; color: #fff; }
+        .od-diff-match { font-size: 0.6rem; color: #10b981; }
         .od-preview-icon { 
             opacity: 0.8; transition: 0.2s; cursor: pointer; padding: 4px 8px; border-radius: 8px; 
             background: rgba(96,165,250, 0.2); border: 1px solid rgba(96,165,250, 0.4);
@@ -126,6 +139,25 @@
     /**
      * EQUAL-SLICE REDISTRIBUTION LOGIC
      */
+    function getTieBreakerClues(survivorIds) {
+        let diffs = [];
+        STATE.rules.forEach(g => {
+            g.clues.forEach(cl => {
+                if (STATE.activeClueIds.has(cl.id)) return;
+                const pool = (cl.onlyCountries || cl.likelyCountries || []);
+                const matchingSurvivors = pool.filter(cid => survivorIds.includes(cid));
+                
+                if (matchingSurvivors.length > 0 && matchingSurvivors.length < survivorIds.length) {
+                    // Complexity: prefer clues that split the group 50/50
+                    const balance = Math.abs(matchingSurvivors.length - (survivorIds.length / 2));
+                    const trust = CONFIG.TRUST[g.category] || 0.5;
+                    diffs.push({ ...cl, category: g.category, matchingSurvivors, score: trust - (balance * 0.1) });
+                }
+            });
+        });
+        return diffs.sort((a,b) => b.score - a.score).slice(0, 5);
+    }
+
     function updateScoring() {
         const container = document.querySelector(".od-suspect-list"), meter = document.getElementById("od-meter"), countText = document.getElementById("od-count");
         if (!container) return;
@@ -327,36 +359,69 @@
         updateAdvice(bar);
     }
 
-    function updateAdvice(activeBar) {
+    function updateAdvice() {
         const adviceContainer = document.getElementById('od-advice');
         if (!adviceContainer) return;
 
-        const currentSuspects = Array.from(document.querySelectorAll('.od-suspect-row'))
-            .filter(r => parseFloat(r.querySelector('.od-score').innerText) > 1)
-            .map(r => r.querySelector('span').innerText);
+        // Get survivors (top 2-5 suspects with > 5% probability)
+        const rows = Array.from(document.querySelectorAll('.od-suspect-row'));
+        const survivors = rows.map(r => ({
+            name: r.querySelector('span:not([style])').innerText,
+            id: STATE.countries.find(c => c.name === r.querySelector('span:not([style])').innerText)?.id,
+            prob: parseFloat(r.querySelector('.od-score').innerText)
+        })).filter(s => s.prob > 5).slice(0, 5);
 
-        if (currentSuspects.length <= 1 || currentSuspects.length > 50) {
+        if (survivors.length < 2) {
             adviceContainer.style.display = 'none';
             return;
         }
 
-        // Calculate entropy: find category with most varying clues for remaining suspects
-        let bestCat = "", maxGain = 0;
-        STATE.rules.forEach(g => {
-            const usefulClues = g.clues.filter(c => !STATE.activeClueIds.has(c.id));
-            if (usefulClues.length > maxGain) {
-                maxGain = usefulClues.length;
-                bestCat = g.category;
-            }
-        });
+        const survivorIds = survivors.map(s => s.id);
+        const tieBreakers = getTieBreakerClues(survivorIds);
 
         adviceContainer.style.display = 'block';
-        adviceContainer.innerHTML = `Best next move: Look for <span class="od-advice-tag">${bestCat}</span> clues.`;
-        adviceContainer.querySelector('.od-advice-tag').onclick = () => {
-            const input = document.getElementById('od-search');
-            input.value = bestCat;
-            input.dispatchEvent(new Event('input'));
-        };
+        if (tieBreakers.length > 0) {
+            const best = tieBreakers[0];
+            const targets = best.matchingSurvivors.map(id => STATE.countries.find(c=>c.id===id)?.name).join(', ');
+            
+            adviceContainer.innerHTML = `
+                <div>Tie detected between <b>${survivors.map(s=>s.name).join(' & ')}</b>.</div>
+                <div style="margin-top:4px; font-size:0.7rem; color:#fff;">
+                    💡 Best differentiator: <span class="od-advice-tag">${best.aspect}</span>
+                </div>
+                <div style="font-size:0.6rem; color:#10b981; margin-top:2px;">
+                    This only matches: ${targets}
+                </div>
+                <div class="od-diff-btn" id="od-show-diffs">Compare Top Differentiators</div>
+            `;
+
+            document.getElementById('od-show-diffs').onclick = () => {
+                const results = tieBreakers.map(tb => `
+                    <div class="od-diff-item">
+                        <div class="od-diff-meta">
+                            <div class="od-diff-aspect">${tb.aspect}</div>
+                            <div class="od-diff-match">Matches: ${tb.matchingSurvivors.map(id => STATE.countries.find(c=>c.id===id)?.name).join(', ')}</div>
+                        </div>
+                        ${tb.img ? '<span class="od-preview-icon">VIEW</span>' : ''}
+                    </div>
+                `).join('');
+                
+                const content = document.getElementById('od-content');
+                content.innerHTML = `<div style="padding:15px; background:#ffffff05; border-radius:15px;">
+                    <div style="font-size:0.8rem; font-weight:800; color:#60a5fa; margin-bottom:12px;">Top Differentiators</div>
+                    ${results}
+                </div>`;
+                setupModalListeners();
+            };
+
+            adviceContainer.querySelector('.od-advice-tag').onclick = () => {
+                const input = document.getElementById('od-search');
+                input.value = best.aspect;
+                input.dispatchEvent(new Event('input'));
+            };
+        } else {
+            adviceContainer.style.display = 'none';
+        }
     }
 
     function exportTrace() {
