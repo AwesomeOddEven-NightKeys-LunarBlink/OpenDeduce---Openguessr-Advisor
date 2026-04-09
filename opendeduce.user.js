@@ -53,12 +53,13 @@
      */
     const STYLES = `
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=JetBrains+Mono:wght@700&display=swap');
-        #od-panel { position: fixed; width:360px; max-height: 90vh; background: rgba(18,18,22, 0.98); backdrop-filter: blur(40px) saturate(200%); border: 1px solid rgba(255,255,255, 0.15); border-radius: 30px; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; z-index: 10000; box-shadow: 0 40px 120px #000; display: flex; flex-direction: column; }
+        #od-panel { position: fixed; width:360px; max-height: 90vh; background: rgba(18,18,22, 0.98); backdrop-filter: blur(40px) saturate(200%); border: 1px solid rgba(255,255,255, 0.15); border-radius: 30px; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; z-index: 10000; box-shadow: 0 40px 120px #000; display: flex; flex-direction: column; box-sizing: border-box; }
         #od-panel.minimized { max-height: 78px; overflow: hidden; }
+        #od-panel * { box-sizing: border-box; }
         .od-header { padding: 22px 28px; border-bottom: 1px solid #ffffff11; cursor: move; display: flex; justify-content: space-between; align-items: center; }
-        .od-title-grp { display: flex; flex-direction: column; }
+        .od-title-grp { display: flex; flex-direction: column; max-width: 200px; }
         .od-badge { font-family: 'JetBrains Mono'; font-size: 0.6rem; color: #60a5fa; text-transform: uppercase; letter-spacing: 0.12em; }
-        .od-title { font-size: 1.62rem; font-weight: 800; background: linear-gradient(135deg, #60a5fa, #c084fc, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.04em; margin: 0; }
+        .od-title { font-size: 1.62rem; font-weight: 800; background: linear-gradient(135deg, #60a5fa, #c084fc, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.04em; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .od-controls { display: flex; gap: 10px; }
         .od-btn { background: #ffffff08; border: 1px solid #ffffff11; border-radius: 12px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s; }
         .od-btn:hover { background: #60a5fa22; transform: translateY(-2px); }
@@ -70,17 +71,19 @@
             overflow-y: auto; z-index: 10001; display: none; margin-top: 8px; 
             box-shadow: 0 20px 60px #000;
         }
-        .od-suggestion-item { padding: 16px 20px; cursor: pointer; border-bottom: 1px solid #ffffff05; font-size: 0.88rem; }
+        .od-suggestion-item { padding: 16px 20px; cursor: pointer; border-bottom: 1px solid #ffffff05; font-size: 0.88rem; overflow-wrap: anywhere; }
         .od-suggestion-item:hover { background: #60a5fa22; padding-left: 24px; }
+        .od-active-bar { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 24px 18px; }
         .od-tag { 
             background: rgba(96,165,250, 0.1); color: #60a5fa; font-size: 0.68rem; 
             padding: 5px 14px; border: 1px solid rgba(96,165,250, 0.3); border-radius: 12px; 
-            cursor: pointer; font-weight: 800; transition: 0.2s;
+            cursor: pointer; font-weight: 800; transition: 0.2s; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
         }
         .od-tag:hover { color: #f87171; border-color: #f87171; background: rgba(248,113,113, 0.1); }
         .od-content { flex: 1; overflow-y: auto; padding: 0 20px 20px; display: none; }
         .od-accordion { margin-bottom: 12px; border-radius: 20px; background: #ffffff03; border: 1px solid #ffffff11; overflow: hidden; }
-        .od-clue-item { display: grid; grid-template-columns: 24px 1fr; align-items: center; gap: 12px; padding: 14px; font-size: 0.92rem; cursor: pointer; color: #cbd5e1; transition: 0.2s; }
+        .od-clue-item { display: grid; grid-template-columns: 24px 1fr 24px; align-items: center; gap: 12px; padding: 14px; font-size: 0.92rem; cursor: pointer; color: #cbd5e1; transition: 0.2s; }
+        .od-clue-item span { overflow-wrap: anywhere; line-height: 1.4; }
         .od-clue-item:hover { color: #60a5fa; background: #ffffff05; }
         .od-footer { padding: 22px 28px; background: #000; border-top: 1px solid #ffffff11; border-radius: 0 0 30px 30px; }
         .od-res-meta { display: flex; justify-content: space-between; font-size: 0.65rem; font-weight: 800; opacity: 0.4; text-transform: uppercase; margin-bottom: 12px; }
@@ -91,6 +94,14 @@
         .od-score { font-family: 'JetBrains Mono'; font-weight: 800; color: #10b981; }
         .od-advice-box { padding: 12px 24px; font-size: 0.75rem; border-top: 1px solid #ffffff08; background: #ffffff03; color: #94a3b8; }
         .od-advice-tag { color: #60a5fa; font-weight: 800; cursor: pointer; }
+        .od-preview-icon { opacity: 0.5; transition: 0.2s; }
+        .od-preview-icon:hover { opacity: 1; transform: scale(1.2); }
+        #od-tooltip { 
+            position: fixed; pointer-events: none; z-index: 10002; display: none;
+            background: #121218; border: 1px solid #ffffff33; border-radius: 15px;
+            padding: 8px; box-shadow: 0 20px 60px #000; max-width: 250px;
+        }
+        #od-tooltip img { width: 100%; border-radius: 10px; display: block; }
     `;
 
     /**
@@ -165,8 +176,16 @@
                 g.clues.forEach(cl => { if (catMatch || cl.aspect.toLowerCase().includes(v)) matches.push({...cl, category: g.category}); });
             });
             if(matches.length > 0) {
-                s.innerHTML = matches.slice(0, 15).map(m => `<div class="od-suggestion-item" data-id="${m.id}"><div style="font-size:0.6rem; color:#60a5fa;">${m.category}</div>${m.aspect}</div>`).join('');
+                s.innerHTML = matches.slice(0, 15).map(m => `
+                    <div class="od-suggestion-item" data-id="${m.id}" data-img="${m.img||''}">
+                        <div style="font-size:0.6rem; color:#60a5fa; display:flex; justify-content:space-between;">
+                            <span>${m.category}</span>
+                            ${m.img ? '<span class="od-preview-icon">🖼️</span>' : ''}
+                        </div>
+                        ${m.aspect}
+                    </div>`).join('');
                 s.style.display='block'; c.style.display='block'; renderAccordion(v);
+                setupTooltips();
             } else { s.style.display='none'; c.style.display='none'; }
         };
         s.onclick = (e) => {
@@ -186,11 +205,38 @@
             const b = acc.querySelector('.od-acc-body');
             clues.forEach(cl => {
                 const l = document.createElement('label'); l.className = 'od-clue-item';
-                l.innerHTML = `<input type="checkbox" data-clue-id="${cl.id}" ${STATE.activeClueIds.has(cl.id)?'checked':''}><span>${cl.aspect}</span>`;
+                l.dataset.img = cl.img || '';
+                l.innerHTML = `
+                    <input type="checkbox" data-clue-id="${cl.id}" ${STATE.activeClueIds.has(cl.id)?'checked':''}>
+                    <span>${cl.aspect}</span>
+                    ${cl.img ? '<span class="od-preview-icon">🖼️</span>' : '<span></span>'}
+                `;
                 l.querySelector('input').onclick = (ev) => { if(ev.target.checked) STATE.activeClueIds.add(cl.id); else STATE.activeClueIds.delete(cl.id); syncUI(); };
                 b.appendChild(l);
             });
             container.appendChild(acc);
+        });
+        setupTooltips();
+    }
+
+    function setupTooltips() {
+        const tooltip = document.getElementById('od-tooltip');
+        const items = document.querySelectorAll('[data-img]');
+        items.forEach(item => {
+            const imgUrl = item.dataset.img;
+            if (!imgUrl) return;
+            item.onmouseenter = (e) => {
+                const img = tooltip.querySelector('img');
+                img.src = imgUrl;
+                tooltip.style.display = 'block';
+            };
+            item.onmousemove = (e) => {
+                tooltip.style.left = (e.clientX + 20) + 'px';
+                tooltip.style.top = (e.clientY - 50) + 'px';
+            };
+            item.onmouseleave = () => {
+                tooltip.style.display = 'none';
+            };
         });
     }
 
@@ -294,7 +340,8 @@
                 <div class="od-content" id="od-content"></div>
                 <div class="od-footer"><div class="od-res-meta"><span id="od-count">Calibrating Forensic Matrix...</span><span>Prob. Density</span></div>
                 <div class="od-meter-wrap"><div class="od-meter-fill" id="od-meter"></div></div><div class="od-suspect-list"></div></div>
-            </div>`;
+            </div>
+            <div id="od-tooltip"><img></div>`;
         document.body.appendChild(p);
         document.getElementById('od-reset').onclick = () => { STATE.activeClueIds.clear(); syncUI(); };
         document.getElementById('od-export').onclick = exportTrace;

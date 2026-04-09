@@ -4829,6 +4829,7 @@
                 {
                     "id": "lang-vietnamese-is",
                     "aspect": "Vietnamese is (Inclusive Matrix)",
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/vietnamese_script.png",
                     "onlyCountries": [
                         "VN"
                     ]
@@ -8911,7 +8912,7 @@
                 { "id": "3986", "aspect": "Concrete, blue band at bottom", "likelyCountries": ["ID"] },
                 { "id": "3987", "aspect": "Concrete, yellow and black spiral/band at bottom", "likelyCountries": ["TW", "KR"] },
                 { "id": "3988", "aspect": "Concrete, square base to round top", "likelyCountries": ["AR", "UY"] },
-                { "id": "3989", "aspect": "Concrete, 'H' shape (two beams connected)", "likelyCountries": ["FR", "ES", "PT"] },
+                { "id": "3989", "aspect": "Concrete, 'H' shape (two beams connected)", "likelyCountries": ["FR", "ES", "PT"], "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/vietnam_h_pole.png" },
                 { "id": "3990", "aspect": "Concrete, 'A' shape", "likelyCountries": ["FR", "BE"] },
                 { "id": "3991", "aspect": "Concrete, very thin spindly top", "likelyCountries": ["IT"] },
                 { "id": "3992", "aspect": "Concrete, metal 'step' or ladder built-in", "likelyCountries": ["RU", "KZ"] },
