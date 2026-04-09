@@ -371,7 +371,7 @@
         p.style.top = STATE.pos.top + 'px'; p.style.left = STATE.pos.left !== null ? STATE.pos.left + 'px' : 'auto'; p.style.right = STATE.pos.right !== 'auto' ? STATE.pos.right + 'px' : 'auto';
         if(STATE.isMinimized) p.classList.add('minimized');
         p.innerHTML = `
-            <div class="od-header"><div class="od-title-grp"><span class="od-badge">Scalpel v1.1.0</span><h1 class="od-title">OpenDeduce</h1></div>
+            <div class="od-header"><div class="od-title-grp"><span class="od-badge">Scalpel v1.0.0</span><h1 class="od-title">OpenDeduce</h1></div>
             <div class="od-controls"><div class="od-btn" id="od-export" title="Export Trace">📋</div><div class="od-btn" id="od-reset">🔄</div><div class="od-btn" id="od-min">—</div></div></div>
             <div id="od-hud-body" style="display:${STATE.isMinimized?'none':'block'}">
                 <div class="od-search-box"><input type="text" id="od-search" class="od-input" placeholder="Search Rules 1,000+ Forensic Clues...">
