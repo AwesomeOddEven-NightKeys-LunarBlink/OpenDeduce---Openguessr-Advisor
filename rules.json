@@ -1384,21 +1384,24 @@
                     "aspect": "Danish Bollard (Yellow/Black Cap)",
                     "onlyCountries": [
                         "DK"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/bollards/dk_bollard.png"
                 },
                 {
                     "id": "bol-sweden",
                     "aspect": "Swedish Bollard (Orange Cap)",
                     "onlyCountries": [
                         "SE"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/bollards/se_bollard.png"
                 },
                 {
                     "id": "bol-poland",
                     "aspect": "Polish Bollard (Red band, white pole)",
                     "onlyCountries": [
                         "PL"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/bollards/pl_bollard.png"
                 },
                 {
                     "id": "bol-estonia",
@@ -2103,7 +2106,8 @@
                         "SB",
                         "TV",
                         "VU"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/cyrillic.png"
                 },
                 {
                     "id": "lang-belarus-u",
@@ -2295,7 +2299,8 @@
                         "SB",
                         "TV",
                         "VU"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/cyrillic.png"
                 },
                 {
                     "id": "lang-iceland-eth-thorn",
@@ -4480,7 +4485,8 @@
                         "RS",
                         "TJ",
                         "UA"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/cyrillic.png"
                 },
                 {
                     "id": "lang-chinese-characters-hanzi-are",
@@ -4600,7 +4606,8 @@
                         "RW",
                         "BI",
                         "CD"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/africa_west.png"
                 },
                 {
                     "id": "lang-persian-farsi-dari-is",
@@ -4707,7 +4714,8 @@
                     "onlyCountries": [
                         "KR",
                         "KP"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/japanese.png"
                 },
                 {
                     "id": "lang-ethiopic-amharic-script-is",
@@ -4782,7 +4790,8 @@
                     "aspect": "Thai is (Inclusive Matrix)",
                     "onlyCountries": [
                         "TH"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/thai.png"
                 },
                 {
                     "id": "lang-lao-is",
@@ -4810,7 +4819,8 @@
                     "aspect": "Japanese is (Inclusive Matrix)",
                     "onlyCountries": [
                         "JP"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/japanese.png"
                 },
                 {
                     "id": "lang-armenian-is",
@@ -5728,7 +5738,8 @@
                     "onlyCountries": [
                         "RS",
                         "ME"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/cyrillic.png"
                 },
                 {
                     "id": "clue-latin-and-arabic-scripts-appear-on-the-same-s",
@@ -5760,7 +5771,8 @@
                     "aspect": "Latin and Thai scripts appear on the same sign (Only)",
                     "onlyCountries": [
                         "TH"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/thai.png"
                 },
                 {
                     "id": "clue-latin-and-lao-scripts-appear-on-the-same-sign",
@@ -5788,7 +5800,8 @@
                     "aspect": "Latin and Japanese scripts appear on the same sign (Only)",
                     "onlyCountries": [
                         "JP"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/japanese.png"
                 },
                 {
                     "id": "clue-latin-and-korean-scripts-appear-on-the-same-s",
@@ -6182,1610 +6195,1840 @@
                     "aspect": "domain .af is present (Only)",
                     "onlyCountries": [
                         "AF"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/af.png"
                 },
                 {
                     "id": "clue-domain--al-is-present",
                     "aspect": "domain .al is present (Only)",
                     "onlyCountries": [
                         "AL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/al.png"
                 },
                 {
                     "id": "clue-domain--dz-is-present",
                     "aspect": "domain .dz is present (Only)",
                     "onlyCountries": [
                         "DZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/dz.png"
                 },
                 {
                     "id": "clue-domain--as-is-present",
                     "aspect": "domain .as is present (Only)",
                     "onlyCountries": [
                         "AS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/as.png"
                 },
                 {
                     "id": "clue-domain--ad-is-present",
                     "aspect": "domain .ad is present (Only)",
                     "onlyCountries": [
                         "AD"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ad.png"
                 },
                 {
                     "id": "clue-domain--ao-is-present",
                     "aspect": "domain .ao is present (Only)",
                     "onlyCountries": [
                         "AO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ao.png"
                 },
                 {
                     "id": "clue-domain--ai-is-present",
                     "aspect": "domain .ai is present (Only)",
                     "onlyCountries": [
                         "AI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ai.png"
                 },
                 {
                     "id": "clue-domain--aq-is-present",
                     "aspect": "domain .aq is present (Only)",
                     "onlyCountries": [
                         "AQ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/aq.png"
                 },
                 {
                     "id": "clue-domain--ar-is-present",
                     "aspect": "domain .ar is present (Only)",
                     "onlyCountries": [
                         "AR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ar.png"
                 },
                 {
                     "id": "clue-domain--am-is-present",
                     "aspect": "domain .am is present (Only)",
                     "onlyCountries": [
                         "AM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/am.png"
                 },
                 {
                     "id": "clue-domain--aw-is-present",
                     "aspect": "domain .aw is present (Only)",
                     "onlyCountries": [
                         "AW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/aw.png"
                 },
                 {
                     "id": "clue-domain--au-is-present",
                     "aspect": "domain .au is present (Only)",
                     "onlyCountries": [
                         "AU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/au.png"
                 },
                 {
                     "id": "clue-domain--at-is-present",
                     "aspect": "domain .at is present (Only)",
                     "onlyCountries": [
                         "AT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/at.png"
                 },
                 {
                     "id": "clue-domain--az-is-present",
                     "aspect": "domain .az is present (Only)",
                     "onlyCountries": [
                         "AZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/az.png"
                 },
                 {
                     "id": "clue-domain--bs-is-present",
                     "aspect": "domain .bs is present (Only)",
                     "onlyCountries": [
                         "BS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bs.png"
                 },
                 {
                     "id": "clue-domain--bh-is-present",
                     "aspect": "domain .bh is present (Only)",
                     "onlyCountries": [
                         "BH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bh.png"
                 },
                 {
                     "id": "clue-domain--bd-is-present",
                     "aspect": "domain .bd is present (Only)",
                     "onlyCountries": [
                         "BD"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bd.png"
                 },
                 {
                     "id": "clue-domain--bb-is-present",
                     "aspect": "domain .bb is present (Only)",
                     "onlyCountries": [
                         "BB"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bb.png"
                 },
                 {
                     "id": "clue-domain--by-is-present",
                     "aspect": "domain .by is present (Only)",
                     "onlyCountries": [
                         "BY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/by.png"
                 },
                 {
                     "id": "clue-domain--be-is-present",
                     "aspect": "domain .be is present (Only)",
                     "onlyCountries": [
                         "BE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/be.png"
                 },
                 {
                     "id": "clue-domain--bz-is-present",
                     "aspect": "domain .bz is present (Only)",
                     "onlyCountries": [
                         "BZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bz.png"
                 },
                 {
                     "id": "clue-domain--bj-is-present",
                     "aspect": "domain .bj is present (Only)",
                     "onlyCountries": [
                         "BJ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bj.png"
                 },
                 {
                     "id": "clue-domain--bm-is-present",
                     "aspect": "domain .bm is present (Only)",
                     "onlyCountries": [
                         "BM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bm.png"
                 },
                 {
                     "id": "clue-domain--bt-is-present",
                     "aspect": "domain .bt is present (Only)",
                     "onlyCountries": [
                         "BT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bt.png"
                 },
                 {
                     "id": "clue-domain--bo-is-present",
                     "aspect": "domain .bo is present (Only)",
                     "onlyCountries": [
                         "BO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bo.png"
                 },
                 {
                     "id": "clue-domain--bw-is-present",
                     "aspect": "domain .bw is present (Only)",
                     "onlyCountries": [
                         "BW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bw.png"
                 },
                 {
                     "id": "clue-domain--br-is-present",
                     "aspect": "domain .br is present (Only)",
                     "onlyCountries": [
                         "BR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/br.png"
                 },
                 {
                     "id": "clue-domain--io-is-present",
                     "aspect": "domain .io is present (Only)",
                     "onlyCountries": [
                         "IO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/io.png"
                 },
                 {
                     "id": "clue-domain--vg-is-present",
                     "aspect": "domain .vg is present (Only)",
                     "onlyCountries": [
                         "VG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/vg.png"
                 },
                 {
                     "id": "clue-domain--bn-is-present",
                     "aspect": "domain .bn is present (Only)",
                     "onlyCountries": [
                         "BN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bn.png"
                 },
                 {
                     "id": "clue-domain--bg-is-present",
                     "aspect": "domain .bg is present (Only)",
                     "onlyCountries": [
                         "BG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bg.png"
                 },
                 {
                     "id": "clue-domain--bf-is-present",
                     "aspect": "domain .bf is present (Only)",
                     "onlyCountries": [
                         "BF"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bf.png"
                 },
                 {
                     "id": "clue-domain--bi-is-present",
                     "aspect": "domain .bi is present (Only)",
                     "onlyCountries": [
                         "BI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bi.png"
                 },
                 {
                     "id": "clue-domain--kh-is-present",
                     "aspect": "domain .kh is present (Only)",
                     "onlyCountries": [
                         "KH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/kh.png"
                 },
                 {
                     "id": "clue-domain--cm-is-present",
                     "aspect": "domain .cm is present (Only)",
                     "onlyCountries": [
                         "CM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cm.png"
                 },
                 {
                     "id": "clue-domain--ca-is-present",
                     "aspect": "domain .ca is present (Only)",
                     "onlyCountries": [
                         "CA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ca.png"
                 },
                 {
                     "id": "clue-domain--cv-is-present",
                     "aspect": "domain .cv is present (Only)",
                     "onlyCountries": [
                         "CV"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cv.png"
                 },
                 {
                     "id": "clue-domain--ky-is-present",
                     "aspect": "domain .ky is present (Only)",
                     "onlyCountries": [
                         "KY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ky.png"
                 },
                 {
                     "id": "clue-domain--cf-is-present",
                     "aspect": "domain .cf is present (Only)",
                     "onlyCountries": [
                         "CF"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cf.png"
                 },
                 {
                     "id": "clue-domain--td-is-present",
                     "aspect": "domain .td is present (Only)",
                     "onlyCountries": [
                         "TD"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/td.png"
                 },
                 {
                     "id": "clue-domain--cl-is-present",
                     "aspect": "domain .cl is present (Only)",
                     "onlyCountries": [
                         "CL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cl.png"
                 },
                 {
                     "id": "clue-domain--cn-is-present",
                     "aspect": "domain .cn is present (Only)",
                     "onlyCountries": [
                         "CN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cn.png"
                 },
                 {
                     "id": "clue-domain--cx-is-present",
                     "aspect": "domain .cx is present (Only)",
                     "onlyCountries": [
                         "CX"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cx.png"
                 },
                 {
                     "id": "clue-domain--cc-is-present",
                     "aspect": "domain .cc is present (Only)",
                     "onlyCountries": [
                         "CC"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cc.png"
                 },
                 {
                     "id": "clue-domain--co-is-present",
                     "aspect": "domain .co is present (Only)",
                     "onlyCountries": [
                         "CO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/co.png"
                 },
                 {
                     "id": "clue-domain--km-is-present",
                     "aspect": "domain .km is present (Only)",
                     "onlyCountries": [
                         "KM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/km.png"
                 },
                 {
                     "id": "clue-domain--cg-is-present",
                     "aspect": "domain .cg is present (Only)",
                     "onlyCountries": [
                         "CG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cg.png"
                 },
                 {
                     "id": "clue-domain--cd-is-present",
                     "aspect": "domain .cd is present (Only)",
                     "onlyCountries": [
                         "CD"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cd.png"
                 },
                 {
                     "id": "clue-domain--ck-is-present",
                     "aspect": "domain .ck is present (Only)",
                     "onlyCountries": [
                         "CK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ck.png"
                 },
                 {
                     "id": "clue-domain--cr-is-present",
                     "aspect": "domain .cr is present (Only)",
                     "onlyCountries": [
                         "CR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cr.png"
                 },
                 {
                     "id": "clue-domain--hr-is-present",
                     "aspect": "domain .hr is present (Only)",
                     "onlyCountries": [
                         "HR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/hr.png"
                 },
                 {
                     "id": "clue-domain--cu-is-present",
                     "aspect": "domain .cu is present (Only)",
                     "onlyCountries": [
                         "CU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cu.png"
                 },
                 {
                     "id": "clue-domain--cw-is-present",
                     "aspect": "domain .cw is present (Only)",
                     "onlyCountries": [
                         "CW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cw.png"
                 },
                 {
                     "id": "clue-domain--cy-is-present",
                     "aspect": "domain .cy is present (Only)",
                     "onlyCountries": [
                         "CY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cy.png"
                 },
                 {
                     "id": "clue-domain--cz-is-present",
                     "aspect": "domain .cz is present (Only)",
                     "onlyCountries": [
                         "CZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cz.png"
                 },
                 {
                     "id": "clue-domain--dk-is-present",
                     "aspect": "domain .dk is present (Only)",
                     "onlyCountries": [
                         "DK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/dk.png"
                 },
                 {
                     "id": "clue-domain--dj-is-present",
                     "aspect": "domain .dj is present (Only)",
                     "onlyCountries": [
                         "DJ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/dj.png"
                 },
                 {
                     "id": "clue-domain--dm-is-present",
                     "aspect": "domain .dm is present (Only)",
                     "onlyCountries": [
                         "DM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/dm.png"
                 },
                 {
                     "id": "clue-domain--do-is-present",
                     "aspect": "domain .do is present (Only)",
                     "onlyCountries": [
                         "DO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/do.png"
                 },
                 {
                     "id": "clue-domain--ec-is-present",
                     "aspect": "domain .ec is present (Only)",
                     "onlyCountries": [
                         "EC"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ec.png"
                 },
                 {
                     "id": "clue-domain--eg-is-present",
                     "aspect": "domain .eg is present (Only)",
                     "onlyCountries": [
                         "EG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/eg.png"
                 },
                 {
                     "id": "clue-domain--sv-is-present",
                     "aspect": "domain .sv is present (Only)",
                     "onlyCountries": [
                         "SV"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sv.png"
                 },
                 {
                     "id": "clue-domain--gq-is-present",
                     "aspect": "domain .gq is present (Only)",
                     "onlyCountries": [
                         "GQ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gq.png"
                 },
                 {
                     "id": "clue-domain--er-is-present",
                     "aspect": "domain .er is present (Only)",
                     "onlyCountries": [
                         "ER"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/er.png"
                 },
                 {
                     "id": "clue-domain--ee-is-present",
                     "aspect": "domain .ee is present (Only)",
                     "onlyCountries": [
                         "EE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ee.png"
                 },
                 {
                     "id": "clue-domain--sz-is-present",
                     "aspect": "domain .sz is present (Only)",
                     "onlyCountries": [
                         "SZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sz.png"
                 },
                 {
                     "id": "clue-domain--et-is-present",
                     "aspect": "domain .et is present (Only)",
                     "onlyCountries": [
                         "ET"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/et.png"
                 },
                 {
                     "id": "clue-domain--fk-is-present",
                     "aspect": "domain .fk is present (Only)",
                     "onlyCountries": [
                         "FK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/fk.png"
                 },
                 {
                     "id": "clue-domain--fo-is-present",
                     "aspect": "domain .fo is present (Only)",
                     "onlyCountries": [
                         "FO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/fo.png"
                 },
                 {
                     "id": "clue-domain--fj-is-present",
                     "aspect": "domain .fj is present (Only)",
                     "onlyCountries": [
                         "FJ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/fj.png"
                 },
                 {
                     "id": "clue-domain--fi-is-present",
                     "aspect": "domain .fi is present (Only)",
                     "onlyCountries": [
                         "FI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/fi.png"
                 },
                 {
                     "id": "clue-domain--fr-is-present",
                     "aspect": "domain .fr is present (Only)",
                     "onlyCountries": [
                         "FR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/fr.png"
                 },
                 {
                     "id": "clue-domain--gf-is-present",
                     "aspect": "domain .gf is present (Only)",
                     "onlyCountries": [
                         "GF"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gf.png"
                 },
                 {
                     "id": "clue-domain--pf-is-present",
                     "aspect": "domain .pf is present (Only)",
                     "onlyCountries": [
                         "PF"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pf.png"
                 },
                 {
                     "id": "clue-domain--tf-is-present",
                     "aspect": "domain .tf is present (Only)",
                     "onlyCountries": [
                         "TF"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tf.png"
                 },
                 {
                     "id": "clue-domain--ga-is-present",
                     "aspect": "domain .ga is present (Only)",
                     "onlyCountries": [
                         "GA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ga.png"
                 },
                 {
                     "id": "clue-domain--gm-is-present",
                     "aspect": "domain .gm is present (Only)",
                     "onlyCountries": [
                         "GM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gm.png"
                 },
                 {
                     "id": "clue-domain--ge-is-present",
                     "aspect": "domain .ge is present (Only)",
                     "onlyCountries": [
                         "GE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ge.png"
                 },
                 {
                     "id": "clue-domain--de-is-present",
                     "aspect": "domain .de is present (Only)",
                     "onlyCountries": [
                         "DE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/de.png"
                 },
                 {
                     "id": "clue-domain--gh-is-present",
                     "aspect": "domain .gh is present (Only)",
                     "onlyCountries": [
                         "GH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gh.png"
                 },
                 {
                     "id": "clue-domain--gi-is-present",
                     "aspect": "domain .gi is present (Only)",
                     "onlyCountries": [
                         "GI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gi.png"
                 },
                 {
                     "id": "clue-domain--gr-is-present",
                     "aspect": "domain .gr is present (Only)",
                     "onlyCountries": [
                         "GR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gr.png"
                 },
                 {
                     "id": "clue-domain--gl-is-present",
                     "aspect": "domain .gl is present (Only)",
                     "onlyCountries": [
                         "GL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gl.png"
                 },
                 {
                     "id": "clue-domain--gd-is-present",
                     "aspect": "domain .gd is present (Only)",
                     "onlyCountries": [
                         "GD"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gd.png"
                 },
                 {
                     "id": "clue-domain--gp-is-present",
                     "aspect": "domain .gp is present (Only)",
                     "onlyCountries": [
                         "GP"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gp.png"
                 },
                 {
                     "id": "clue-domain--gu-is-present",
                     "aspect": "domain .gu is present (Only)",
                     "onlyCountries": [
                         "GU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gu.png"
                 },
                 {
                     "id": "clue-domain--gt-is-present",
                     "aspect": "domain .gt is present (Only)",
                     "onlyCountries": [
                         "GT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gt.png"
                 },
                 {
                     "id": "clue-domain--gg-is-present",
                     "aspect": "domain .gg is present (Only)",
                     "onlyCountries": [
                         "GG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gg.png"
                 },
                 {
                     "id": "clue-domain--gn-is-present",
                     "aspect": "domain .gn is present (Only)",
                     "onlyCountries": [
                         "GN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gn.png"
                 },
                 {
                     "id": "clue-domain--gw-is-present",
                     "aspect": "domain .gw is present (Only)",
                     "onlyCountries": [
                         "GW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gw.png"
                 },
                 {
                     "id": "clue-domain--gy-is-present",
                     "aspect": "domain .gy is present (Only)",
                     "onlyCountries": [
                         "GY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gy.png"
                 },
                 {
                     "id": "clue-domain--ht-is-present",
                     "aspect": "domain .ht is present (Only)",
                     "onlyCountries": [
                         "HT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ht.png"
                 },
                 {
                     "id": "clue-domain--va-is-present",
                     "aspect": "domain .va is present (Only)",
                     "onlyCountries": [
                         "VA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/va.png"
                 },
                 {
                     "id": "clue-domain--hn-is-present",
                     "aspect": "domain .hn is present (Only)",
                     "onlyCountries": [
                         "HN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/hn.png"
                 },
                 {
                     "id": "clue-domain--hk-is-present",
                     "aspect": "domain .hk is present (Only)",
                     "onlyCountries": [
                         "HK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/hk.png"
                 },
                 {
                     "id": "clue-domain--hu-is-present",
                     "aspect": "domain .hu is present (Only)",
                     "onlyCountries": [
                         "HU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/hu.png"
                 },
                 {
                     "id": "clue-domain--is-is-present",
                     "aspect": "domain .is is present (Only)",
                     "onlyCountries": [
                         "IS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/is.png"
                 },
                 {
                     "id": "clue-domain--in-is-present",
                     "aspect": "domain .in is present (Only)",
                     "onlyCountries": [
                         "IN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/in.png"
                 },
                 {
                     "id": "clue-domain--id-is-present",
                     "aspect": "domain .id is present (Only)",
                     "onlyCountries": [
                         "ID"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/id.png"
                 },
                 {
                     "id": "clue-domain--ir-is-present",
                     "aspect": "domain .ir is present (Only)",
                     "onlyCountries": [
                         "IR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ir.png"
                 },
                 {
                     "id": "clue-domain--iq-is-present",
                     "aspect": "domain .iq is present (Only)",
                     "onlyCountries": [
                         "IQ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/iq.png"
                 },
                 {
                     "id": "clue-domain--ie-is-present",
                     "aspect": "domain .ie is present (Only)",
                     "onlyCountries": [
                         "IE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ie.png"
                 },
                 {
                     "id": "clue-domain--im-is-present",
                     "aspect": "domain .im is present (Only)",
                     "onlyCountries": [
                         "IM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/im.png"
                 },
                 {
                     "id": "clue-domain--il-is-present",
                     "aspect": "domain .il is present (Only)",
                     "onlyCountries": [
                         "IL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/il.png"
                 },
                 {
                     "id": "clue-domain--it-is-present",
                     "aspect": "domain .it is present (Only)",
                     "onlyCountries": [
                         "IT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/it.png"
                 },
                 {
                     "id": "clue-domain--ci-is-present",
                     "aspect": "domain .ci is present (Only)",
                     "onlyCountries": [
                         "CI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ci.png"
                 },
                 {
                     "id": "clue-domain--jm-is-present",
                     "aspect": "domain .jm is present (Only)",
                     "onlyCountries": [
                         "JM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/jm.png"
                 },
                 {
                     "id": "clue-domain--jp-is-present",
                     "aspect": "domain .jp is present (Only)",
                     "onlyCountries": [
                         "JP"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/jp.png"
                 },
                 {
                     "id": "clue-domain--je-is-present",
                     "aspect": "domain .je is present (Only)",
                     "onlyCountries": [
                         "JE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/je.png"
                 },
                 {
                     "id": "clue-domain--jo-is-present",
                     "aspect": "domain .jo is present (Only)",
                     "onlyCountries": [
                         "JO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/jo.png"
                 },
                 {
                     "id": "clue-domain--kz-is-present",
                     "aspect": "domain .kz is present (Only)",
                     "onlyCountries": [
                         "KZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/kz.png"
                 },
                 {
                     "id": "clue-domain--ke-is-present",
                     "aspect": "domain .ke is present (Only)",
                     "onlyCountries": [
                         "KE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ke.png"
                 },
                 {
                     "id": "clue-domain--ki-is-present",
                     "aspect": "domain .ki is present (Only)",
                     "onlyCountries": [
                         "KI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ki.png"
                 },
                 {
                     "id": "clue-domain--kp-is-present",
                     "aspect": "domain .kp is present (Only)",
                     "onlyCountries": [
                         "KP"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/kp.png"
                 },
                 {
                     "id": "clue-domain--kr-is-present",
                     "aspect": "domain .kr is present (Only)",
                     "onlyCountries": [
                         "KR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/kr.png"
                 },
                 {
                     "id": "clue-domain--kw-is-present",
                     "aspect": "domain .kw is present (Only)",
                     "onlyCountries": [
                         "KW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/kw.png"
                 },
                 {
                     "id": "clue-domain--kg-is-present",
                     "aspect": "domain .kg is present (Only)",
                     "onlyCountries": [
                         "KG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/kg.png"
                 },
                 {
                     "id": "clue-domain--la-is-present",
                     "aspect": "domain .la is present (Only)",
                     "onlyCountries": [
                         "LA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/la.png"
                 },
                 {
                     "id": "clue-domain--lv-is-present",
                     "aspect": "domain .lv is present (Only)",
                     "onlyCountries": [
                         "LV"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lv.png"
                 },
                 {
                     "id": "clue-domain--lb-is-present",
                     "aspect": "domain .lb is present (Only)",
                     "onlyCountries": [
                         "LB"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lb.png"
                 },
                 {
                     "id": "clue-domain--ls-is-present",
                     "aspect": "domain .ls is present (Only)",
                     "onlyCountries": [
                         "LS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ls.png"
                 },
                 {
                     "id": "clue-domain--lr-is-present",
                     "aspect": "domain .lr is present (Only)",
                     "onlyCountries": [
                         "LR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lr.png"
                 },
                 {
                     "id": "clue-domain--ly-is-present",
                     "aspect": "domain .ly is present (Only)",
                     "onlyCountries": [
                         "LY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ly.png"
                 },
                 {
                     "id": "clue-domain--li-is-present",
                     "aspect": "domain .li is present (Only)",
                     "onlyCountries": [
                         "LI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/li.png"
                 },
                 {
                     "id": "clue-domain--lt-is-present",
                     "aspect": "domain .lt is present (Only)",
                     "onlyCountries": [
                         "LT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lt.png"
                 },
                 {
                     "id": "clue-domain--lu-is-present",
                     "aspect": "domain .lu is present (Only)",
                     "onlyCountries": [
                         "LU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lu.png"
                 },
                 {
                     "id": "clue-domain--mo-is-present",
                     "aspect": "domain .mo is present (Only)",
                     "onlyCountries": [
                         "MO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mo.png"
                 },
                 {
                     "id": "clue-domain--mg-is-present",
                     "aspect": "domain .mg is present (Only)",
                     "onlyCountries": [
                         "MG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mg.png"
                 },
                 {
                     "id": "clue-domain--mw-is-present",
                     "aspect": "domain .mw is present (Only)",
                     "onlyCountries": [
                         "MW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mw.png"
                 },
                 {
                     "id": "clue-domain--my-is-present",
                     "aspect": "domain .my is present (Only)",
                     "onlyCountries": [
                         "MY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/my.png"
                 },
                 {
                     "id": "clue-domain--mv-is-present",
                     "aspect": "domain .mv is present (Only)",
                     "onlyCountries": [
                         "MV"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mv.png"
                 },
                 {
                     "id": "clue-domain--ml-is-present",
                     "aspect": "domain .ml is present (Only)",
                     "onlyCountries": [
                         "ML"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ml.png"
                 },
                 {
                     "id": "clue-domain--mt-is-present",
                     "aspect": "domain .mt is present (Only)",
                     "onlyCountries": [
                         "MT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mt.png"
                 },
                 {
                     "id": "clue-domain--mh-is-present",
                     "aspect": "domain .mh is present (Only)",
                     "onlyCountries": [
                         "MH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mh.png"
                 },
                 {
                     "id": "clue-domain--mq-is-present",
                     "aspect": "domain .mq is present (Only)",
                     "onlyCountries": [
                         "MQ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mq.png"
                 },
                 {
                     "id": "clue-domain--mr-is-present",
                     "aspect": "domain .mr is present (Only)",
                     "onlyCountries": [
                         "MR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mr.png"
                 },
                 {
                     "id": "clue-domain--mu-is-present",
                     "aspect": "domain .mu is present (Only)",
                     "onlyCountries": [
                         "MU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mu.png"
                 },
                 {
                     "id": "clue-domain--yt-is-present",
                     "aspect": "domain .yt is present (Only)",
                     "onlyCountries": [
                         "YT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/yt.png"
                 },
                 {
                     "id": "clue-domain--mx-is-present",
                     "aspect": "domain .mx is present (Only)",
                     "onlyCountries": [
                         "MX"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mx.png"
                 },
                 {
                     "id": "clue-domain--fm-is-present",
                     "aspect": "domain .fm is present (Only)",
                     "onlyCountries": [
                         "FM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/fm.png"
                 },
                 {
                     "id": "clue-domain--md-is-present",
                     "aspect": "domain .md is present (Only)",
                     "onlyCountries": [
                         "MD"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/md.png"
                 },
                 {
                     "id": "clue-domain--mc-is-present",
                     "aspect": "domain .mc is present (Only)",
                     "onlyCountries": [
                         "MC"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mc.png"
                 },
                 {
                     "id": "clue-domain--mn-is-present",
                     "aspect": "domain .mn is present (Only)",
                     "onlyCountries": [
                         "MN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mn.png"
                 },
                 {
                     "id": "clue-domain--me-is-present",
                     "aspect": "domain .me is present (Only)",
                     "onlyCountries": [
                         "ME"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/me.png"
                 },
                 {
                     "id": "clue-domain--ms-is-present",
                     "aspect": "domain .ms is present (Only)",
                     "onlyCountries": [
                         "MS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ms.png"
                 },
                 {
                     "id": "clue-domain--ma-is-present",
                     "aspect": "domain .ma is present (Only)",
                     "onlyCountries": [
                         "MA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ma.png"
                 },
                 {
                     "id": "clue-domain--mz-is-present",
                     "aspect": "domain .mz is present (Only)",
                     "onlyCountries": [
                         "MZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mz.png"
                 },
                 {
                     "id": "clue-domain--mm-is-present",
                     "aspect": "domain .mm is present (Only)",
                     "onlyCountries": [
                         "MM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mm.png"
                 },
                 {
                     "id": "clue-domain--na-is-present",
                     "aspect": "domain .na is present (Only)",
                     "onlyCountries": [
                         "NA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/na.png"
                 },
                 {
                     "id": "clue-domain--nr-is-present",
                     "aspect": "domain .nr is present (Only)",
                     "onlyCountries": [
                         "NR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/nr.png"
                 },
                 {
                     "id": "clue-domain--np-is-present",
                     "aspect": "domain .np is present (Only)",
                     "onlyCountries": [
                         "NP"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/np.png"
                 },
                 {
                     "id": "clue-domain--nl-is-present",
                     "aspect": "domain .nl is present (Only)",
                     "onlyCountries": [
                         "NL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/nl.png"
                 },
                 {
                     "id": "clue-domain--nc-is-present",
                     "aspect": "domain .nc is present (Only)",
                     "onlyCountries": [
                         "NC"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/nc.png"
                 },
                 {
                     "id": "clue-domain--nz-is-present",
                     "aspect": "domain .nz is present (Only)",
                     "onlyCountries": [
                         "NZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/nz.png"
                 },
                 {
                     "id": "clue-domain--ni-is-present",
                     "aspect": "domain .ni is present (Only)",
                     "onlyCountries": [
                         "NI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ni.png"
                 },
                 {
                     "id": "clue-domain--ne-is-present",
                     "aspect": "domain .ne is present (Only)",
                     "onlyCountries": [
                         "NE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ne.png"
                 },
                 {
                     "id": "clue-domain--ng-is-present",
                     "aspect": "domain .ng is present (Only)",
                     "onlyCountries": [
                         "NG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ng.png"
                 },
                 {
                     "id": "clue-domain--nu-is-present",
                     "aspect": "domain .nu is present (Only)",
                     "onlyCountries": [
                         "NU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/nu.png"
                 },
                 {
                     "id": "clue-domain--nf-is-present",
                     "aspect": "domain .nf is present (Only)",
                     "onlyCountries": [
                         "NF"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/nf.png"
                 },
                 {
                     "id": "clue-domain--mp-is-present",
                     "aspect": "domain .mp is present (Only)",
                     "onlyCountries": [
                         "MP"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mp.png"
                 },
                 {
                     "id": "clue-domain--no-is-present",
                     "aspect": "domain .no is present (Only)",
                     "onlyCountries": [
                         "NO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/no.png"
                 },
                 {
                     "id": "clue-domain--om-is-present",
                     "aspect": "domain .om is present (Only)",
                     "onlyCountries": [
                         "OM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/om.png"
                 },
                 {
                     "id": "clue-domain--pk-is-present",
                     "aspect": "domain .pk is present (Only)",
                     "onlyCountries": [
                         "PK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pk.png"
                 },
                 {
                     "id": "clue-domain--pw-is-present",
                     "aspect": "domain .pw is present (Only)",
                     "onlyCountries": [
                         "PW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pw.png"
                 },
                 {
                     "id": "clue-domain--ps-is-present",
                     "aspect": "domain .ps is present (Only)",
                     "onlyCountries": [
                         "PS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ps.png"
                 },
                 {
                     "id": "clue-domain--pa-is-present",
                     "aspect": "domain .pa is present (Only)",
                     "onlyCountries": [
                         "PA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pa.png"
                 },
                 {
                     "id": "clue-domain--pg-is-present",
                     "aspect": "domain .pg is present (Only)",
                     "onlyCountries": [
                         "PG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pg.png"
                 },
                 {
                     "id": "clue-domain--py-is-present",
                     "aspect": "domain .py is present (Only)",
                     "onlyCountries": [
                         "PY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/py.png"
                 },
                 {
                     "id": "clue-domain--pe-is-present",
                     "aspect": "domain .pe is present (Only)",
                     "onlyCountries": [
                         "PE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pe.png"
                 },
                 {
                     "id": "clue-domain--ph-is-present",
                     "aspect": "domain .ph is present (Only)",
                     "onlyCountries": [
                         "PH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ph.png"
                 },
                 {
                     "id": "clue-domain--pn-is-present",
                     "aspect": "domain .pn is present (Only)",
                     "onlyCountries": [
                         "PN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pn.png"
                 },
                 {
                     "id": "clue-domain--pl-is-present",
                     "aspect": "domain .pl is present (Only)",
                     "onlyCountries": [
                         "PL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pl.png"
                 },
                 {
                     "id": "clue-domain--pt-is-present",
                     "aspect": "domain .pt is present (Only)",
                     "onlyCountries": [
                         "PT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pt.png"
                 },
                 {
                     "id": "clue-domain--pr-is-present",
                     "aspect": "domain .pr is present (Only)",
                     "onlyCountries": [
                         "PR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pr.png"
                 },
                 {
                     "id": "clue-domain--qa-is-present",
                     "aspect": "domain .qa is present (Only)",
                     "onlyCountries": [
                         "QA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/qa.png"
                 },
                 {
                     "id": "clue-domain--re-is-present",
                     "aspect": "domain .re is present (Only)",
                     "onlyCountries": [
                         "RE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/re.png"
                 },
                 {
                     "id": "clue-domain--ro-is-present",
                     "aspect": "domain .ro is present (Only)",
                     "onlyCountries": [
                         "RO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ro.png"
                 },
                 {
                     "id": "clue-domain--ru-is-present",
                     "aspect": "domain .ru is present (Only)",
                     "onlyCountries": [
                         "RU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ru.png"
                 },
                 {
                     "id": "clue-domain--rw-is-present",
                     "aspect": "domain .rw is present (Only)",
                     "onlyCountries": [
                         "RW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/rw.png"
                 },
                 {
                     "id": "clue-domain--bl-is-present",
                     "aspect": "domain .bl is present (Only)",
                     "onlyCountries": [
                         "BL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bl.png"
                 },
                 {
                     "id": "clue-domain--sh-is-present",
                     "aspect": "domain .sh is present (Only)",
                     "onlyCountries": [
                         "SH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sh.png"
                 },
                 {
                     "id": "clue-domain--lc-is-present",
                     "aspect": "domain .lc is present (Only)",
                     "onlyCountries": [
                         "LC"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lc.png"
                 },
                 {
                     "id": "clue-domain--mf-is-present",
                     "aspect": "domain .mf is present (Only)",
                     "onlyCountries": [
                         "MF"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mf.png"
                 },
                 {
                     "id": "clue-domain--ws-is-present",
                     "aspect": "domain .ws is present (Only)",
                     "onlyCountries": [
                         "WS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ws.png"
                 },
                 {
                     "id": "clue-domain--sm-is-present",
                     "aspect": "domain .sm is present (Only)",
                     "onlyCountries": [
                         "SM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sm.png"
                 },
                 {
                     "id": "clue-domain--sa-is-present",
                     "aspect": "domain .sa is present (Only)",
                     "onlyCountries": [
                         "SA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sa.png"
                 },
                 {
                     "id": "clue-domain--sn-is-present",
                     "aspect": "domain .sn is present (Only)",
                     "onlyCountries": [
                         "SN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sn.png"
                 },
                 {
                     "id": "clue-domain--rs-is-present",
                     "aspect": "domain .rs is present (Only)",
                     "onlyCountries": [
                         "RS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/rs.png"
                 },
                 {
                     "id": "clue-domain--sc-is-present",
                     "aspect": "domain .sc is present (Only)",
                     "onlyCountries": [
                         "SC"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sc.png"
                 },
                 {
                     "id": "clue-domain--sl-is-present",
                     "aspect": "domain .sl is present (Only)",
                     "onlyCountries": [
                         "SL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sl.png"
                 },
                 {
                     "id": "clue-domain--sg-is-present",
                     "aspect": "domain .sg is present (Only)",
                     "onlyCountries": [
                         "SG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sg.png"
                 },
                 {
                     "id": "clue-domain--sx-is-present",
                     "aspect": "domain .sx is present (Only)",
                     "onlyCountries": [
                         "SX"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sx.png"
                 },
                 {
                     "id": "clue-domain--sk-is-present",
                     "aspect": "domain .sk is present (Only)",
                     "onlyCountries": [
                         "SK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sk.png"
                 },
                 {
                     "id": "clue-domain--si-is-present",
                     "aspect": "domain .si is present (Only)",
                     "onlyCountries": [
                         "SI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/si.png"
                 },
                 {
                     "id": "clue-domain--sb-is-present",
                     "aspect": "domain .sb is present (Only)",
                     "onlyCountries": [
                         "SB"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sb.png"
                 },
                 {
                     "id": "clue-domain--so-is-present",
                     "aspect": "domain .so is present (Only)",
                     "onlyCountries": [
                         "SO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/so.png"
                 },
                 {
                     "id": "clue-domain--za-is-present",
                     "aspect": "domain .za is present (Only)",
                     "onlyCountries": [
                         "ZA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/za.png"
                 },
                 {
                     "id": "clue-domain--ss-is-present",
                     "aspect": "domain .ss is present (Only)",
                     "onlyCountries": [
                         "SS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ss.png"
                 },
                 {
                     "id": "clue-domain--es-is-present",
                     "aspect": "domain .es is present (Only)",
                     "onlyCountries": [
                         "ES"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/es.png"
                 },
                 {
                     "id": "clue-domain--lk-is-present",
                     "aspect": "domain .lk is present (Only)",
                     "onlyCountries": [
                         "LK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lk.png"
                 },
                 {
                     "id": "clue-domain--sd-is-present",
                     "aspect": "domain .sd is present (Only)",
                     "onlyCountries": [
                         "SD"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sd.png"
                 },
                 {
                     "id": "clue-domain--sr-is-present",
                     "aspect": "domain .sr is present (Only)",
                     "onlyCountries": [
                         "SR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sr.png"
                 },
                 {
                     "id": "clue-domain--se-is-present",
                     "aspect": "domain .se is present (Only)",
                     "onlyCountries": [
                         "SE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/se.png"
                 },
                 {
                     "id": "clue-domain--ch-is-present",
                     "aspect": "domain .ch is present (Only)",
                     "onlyCountries": [
                         "CH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ch.png"
                 },
                 {
                     "id": "clue-domain--sy-is-present",
                     "aspect": "domain .sy is present (Only)",
                     "onlyCountries": [
                         "SY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/sy.png"
                 },
                 {
                     "id": "clue-domain--tw-is-present",
                     "aspect": "domain .tw is present (Only)",
                     "onlyCountries": [
                         "TW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tw.png"
                 },
                 {
                     "id": "clue-domain--tj-is-present",
                     "aspect": "domain .tj is present (Only)",
                     "onlyCountries": [
                         "TJ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tj.png"
                 },
                 {
                     "id": "clue-domain--tz-is-present",
                     "aspect": "domain .tz is present (Only)",
                     "onlyCountries": [
                         "TZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tz.png"
                 },
                 {
                     "id": "clue-domain--th-is-present",
                     "aspect": "domain .th is present (Only)",
                     "onlyCountries": [
                         "TH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/th.png"
                 },
                 {
                     "id": "clue-domain--tl-is-present",
                     "aspect": "domain .tl is present (Only)",
                     "onlyCountries": [
                         "TL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tl.png"
                 },
                 {
                     "id": "clue-domain--tg-is-present",
                     "aspect": "domain .tg is present (Only)",
                     "onlyCountries": [
                         "TG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tg.png"
                 },
                 {
                     "id": "clue-domain--to-is-present",
                     "aspect": "domain .to is present (Only)",
                     "onlyCountries": [
                         "TO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/to.png"
                 },
                 {
                     "id": "clue-domain--tn-is-present",
                     "aspect": "domain .tn is present (Only)",
                     "onlyCountries": [
                         "TN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tn.png"
                 },
                 {
                     "id": "clue-domain--tr-is-present",
                     "aspect": "domain .tr is present (Only)",
                     "onlyCountries": [
                         "TR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tr.png"
                 },
                 {
                     "id": "clue-domain--tm-is-present",
                     "aspect": "domain .tm is present (Only)",
                     "onlyCountries": [
                         "TM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tm.png"
                 },
                 {
                     "id": "clue-domain--tv-is-present",
                     "aspect": "domain .tv is present (Only)",
                     "onlyCountries": [
                         "TV"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tv.png"
                 },
                 {
                     "id": "clue-domain--ug-is-present",
                     "aspect": "domain .ug is present (Only)",
                     "onlyCountries": [
                         "UG"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ug.png"
                 },
                 {
                     "id": "clue-domain--ua-is-present",
                     "aspect": "domain .ua is present (Only)",
                     "onlyCountries": [
                         "UA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ua.png"
                 },
                 {
                     "id": "clue-domain--ae-is-present",
                     "aspect": "domain .ae is present (Only)",
                     "onlyCountries": [
                         "AE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ae.png"
                 },
                 {
                     "id": "clue-domain--uk-or--gb-is-present",
                     "aspect": "domain .uk or .gb is present (Only)",
                     "onlyCountries": [
                         "UK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/uk.png"
                 },
                 {
                     "id": "clue-domain--us-is-present",
                     "aspect": "domain .us is present (Only)",
                     "onlyCountries": [
                         "US"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/us.png"
                 },
                 {
                     "id": "clue-domain--uy-is-present",
                     "aspect": "domain .uy is present (Only)",
                     "onlyCountries": [
                         "UY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/uy.png"
                 },
                 {
                     "id": "clue-domain--uz-is-present",
                     "aspect": "domain .uz is present (Only)",
                     "onlyCountries": [
                         "UZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/uz.png"
                 },
                 {
                     "id": "clue-domain--vu-is-present",
                     "aspect": "domain .vu is present (Only)",
                     "onlyCountries": [
                         "VU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/vu.png"
                 },
                 {
                     "id": "clue-domain--ve-is-present",
                     "aspect": "domain .ve is present (Only)",
                     "onlyCountries": [
                         "VE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ve.png"
                 },
                 {
                     "id": "clue-domain--vn-is-present",
                     "aspect": "domain .vn is present (Only)",
                     "onlyCountries": [
                         "VN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/vn.png"
                 },
                 {
                     "id": "clue-domain--eh-is-present",
                     "aspect": "domain .eh is present (Only)",
                     "onlyCountries": [
                         "EH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/eh.png"
                 },
                 {
                     "id": "clue-domain--ye-is-present",
                     "aspect": "domain .ye is present (Only)",
                     "onlyCountries": [
                         "YE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ye.png"
                 },
                 {
                     "id": "clue-domain--zm-is-present",
                     "aspect": "domain .zm is present (Only)",
                     "onlyCountries": [
                         "ZM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/zm.png"
                 },
                 {
                     "id": "clue-domain--zw-is-present",
                     "aspect": "domain .zw is present (Only)",
                     "onlyCountries": [
                         "ZW"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/zw.png"
                 }
             ]
         },
@@ -7797,217 +8040,248 @@
                     "aspect": "phone code +27 is present (Only)",
                     "onlyCountries": [
                         "ZA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/za.png"
                 },
                 {
                     "id": "clue-phone-code--66-is-present",
                     "aspect": "phone code +66 is present (Only)",
                     "onlyCountries": [
                         "TH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/th.png"
                 },
                 {
                     "id": "clue-phone-code--62-is-present",
                     "aspect": "phone code +62 is present (Only)",
                     "onlyCountries": [
                         "ID"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/id.png"
                 },
                 {
                     "id": "clue-phone-code--60-is-present",
                     "aspect": "phone code +60 is present (Only)",
                     "onlyCountries": [
                         "MY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/my.png"
                 },
                 {
                     "id": "clue-phone-code--63-is-present",
                     "aspect": "phone code +63 is present (Only)",
                     "onlyCountries": [
                         "PH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ph.png"
                 },
                 {
                     "id": "clue-phone-code--84-is-present",
                     "aspect": "phone code +84 is present (Only)",
                     "onlyCountries": [
                         "VN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/vn.png"
                 },
                 {
                     "id": "clue-phone-code--90-is-present",
                     "aspect": "phone code +90 is present (Only)",
                     "onlyCountries": [
                         "TR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/tr.png"
                 },
                 {
                     "id": "clue-phone-code--48-is-present",
                     "aspect": "phone code +48 is present (Only)",
                     "onlyCountries": [
                         "PL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pl.png"
                 },
                 {
                     "id": "clue-phone-code--420-is-present",
                     "aspect": "phone code +420 is present (Only)",
                     "onlyCountries": [
                         "CZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cz.png"
                 },
                 {
                     "id": "clue-phone-code--40-is-present",
                     "aspect": "phone code +40 is present (Only)",
                     "onlyCountries": [
                         "RO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ro.png"
                 },
                 {
                     "id": "clue-phone-code--36-is-present",
                     "aspect": "phone code +36 is present (Only)",
                     "onlyCountries": [
                         "HU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/hu.png"
                 },
                 {
                     "id": "clue-phone-code--30-is-present",
                     "aspect": "phone code +30 is present (Only)",
                     "onlyCountries": [
                         "GR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/gr.png"
                 },
                 {
                     "id": "clue-phone-code--351-is-present",
                     "aspect": "phone code +351 is present (Only)",
                     "onlyCountries": [
                         "PT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pt.png"
                 },
                 {
                     "id": "clue-phone-code--34-is-present",
                     "aspect": "phone code +34 is present (Only)",
                     "onlyCountries": [
                         "ES"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/es.png"
                 },
                 {
                     "id": "clue-phone-code--39-is-present",
                     "aspect": "phone code +39 is present (Only)",
                     "onlyCountries": [
                         "IT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/it.png"
                 },
                 {
                     "id": "clue-phone-code--33-is-present",
                     "aspect": "phone code +33 is present (Only)",
                     "onlyCountries": [
                         "FR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/fr.png"
                 },
                 {
                     "id": "clue-phone-code--49-is-present",
                     "aspect": "phone code +49 is present (Only)",
                     "onlyCountries": [
                         "DE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/de.png"
                 },
                 {
                     "id": "clue-phone-code--41-is-present",
                     "aspect": "phone code +41 is present (Only)",
                     "onlyCountries": [
                         "CH"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ch.png"
                 },
                 {
                     "id": "clue-phone-code--43-is-present",
                     "aspect": "phone code +43 is present (Only)",
                     "onlyCountries": [
                         "AT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/at.png"
                 },
                 {
                     "id": "clue-phone-code--32-is-present",
                     "aspect": "phone code +32 is present (Only)",
                     "onlyCountries": [
                         "BE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/be.png"
                 },
                 {
                     "id": "clue-phone-code--31-is-present",
                     "aspect": "phone code +31 is present (Only)",
                     "onlyCountries": [
                         "NL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/nl.png"
                 },
                 {
                     "id": "clue-phone-code--44-is-present",
                     "aspect": "phone code +44 is present (Only)",
                     "onlyCountries": [
                         "UK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/uk.png"
                 },
                 {
                     "id": "clue-phone-code--353-is-present",
                     "aspect": "phone code +353 is present (Only)",
                     "onlyCountries": [
                         "IE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ie.png"
                 },
                 {
                     "id": "clue-phone-code--47-is-present",
                     "aspect": "phone code +47 is present (Only)",
                     "onlyCountries": [
                         "NO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/no.png"
                 },
                 {
                     "id": "clue-phone-code--46-is-present",
                     "aspect": "phone code +46 is present (Only)",
                     "onlyCountries": [
                         "SE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/se.png"
                 },
                 {
                     "id": "clue-phone-code--45-is-present",
                     "aspect": "phone code +45 is present (Only)",
                     "onlyCountries": [
                         "DK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/dk.png"
                 },
                 {
                     "id": "clue-phone-code--358-is-present",
                     "aspect": "phone code +358 is present (Only)",
                     "onlyCountries": [
                         "FI"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/fi.png"
                 },
                 {
                     "id": "clue-phone-code--354-is-present",
                     "aspect": "phone code +354 is present (Only)",
                     "onlyCountries": [
                         "IS"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/is.png"
                 },
                 {
                     "id": "clue-phone-code--372-is-present",
                     "aspect": "phone code +372 is present (Only)",
                     "onlyCountries": [
                         "EE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ee.png"
                 },
                 {
                     "id": "clue-phone-code--371-is-present",
                     "aspect": "phone code +371 is present (Only)",
                     "onlyCountries": [
                         "LV"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lv.png"
                 },
                 {
                     "id": "clue-phone-code--370-is-present",
                     "aspect": "phone code +370 is present (Only)",
                     "onlyCountries": [
                         "LT"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lt.png"
                 },
                 {
                     "id": "clue-phone-code--7-is-present",
@@ -8022,140 +8296,160 @@
                     "aspect": "phone code +380 is present (Only)",
                     "onlyCountries": [
                         "UA"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ua.png"
                 },
                 {
                     "id": "clue-phone-code--375-is-present",
                     "aspect": "phone code +375 is present (Only)",
                     "onlyCountries": [
                         "BY"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/by.png"
                 },
                 {
                     "id": "clue-phone-code--995-is-present",
                     "aspect": "phone code +995 is present (Only)",
                     "onlyCountries": [
                         "GE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ge.png"
                 },
                 {
                     "id": "clue-phone-code--374-is-present",
                     "aspect": "phone code +374 is present (Only)",
                     "onlyCountries": [
                         "AM"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/am.png"
                 },
                 {
                     "id": "clue-phone-code--994-is-present",
                     "aspect": "phone code +994 is present (Only)",
                     "onlyCountries": [
                         "AZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/az.png"
                 },
                 {
                     "id": "clue-phone-code--972-is-present",
                     "aspect": "phone code +972 is present (Only)",
                     "onlyCountries": [
                         "IL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/il.png"
                 },
                 {
                     "id": "clue-phone-code--81-is-present",
                     "aspect": "phone code +81 is present (Only)",
                     "onlyCountries": [
                         "JP"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/jp.png"
                 },
                 {
                     "id": "clue-phone-code--82-is-present",
                     "aspect": "phone code +82 is present (Only)",
                     "onlyCountries": [
                         "KR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/kr.png"
                 },
                 {
                     "id": "clue-phone-code--91-is-present",
                     "aspect": "phone code +91 is present (Only)",
                     "onlyCountries": [
                         "IN"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/in.png"
                 },
                 {
                     "id": "clue-phone-code--94-is-present",
                     "aspect": "phone code +94 is present (Only)",
                     "onlyCountries": [
                         "LK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/lk.png"
                 },
                 {
                     "id": "clue-phone-code--880-is-present",
                     "aspect": "phone code +880 is present (Only)",
                     "onlyCountries": [
                         "BD"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/bd.png"
                 },
                 {
                     "id": "clue-phone-code--92-is-present",
                     "aspect": "phone code +92 is present (Only)",
                     "onlyCountries": [
                         "PK"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pk.png"
                 },
                 {
                     "id": "clue-phone-code--55-is-present",
                     "aspect": "phone code +55 is present (Only)",
                     "onlyCountries": [
                         "BR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/br.png"
                 },
                 {
                     "id": "clue-phone-code--54-is-present",
                     "aspect": "phone code +54 is present (Only)",
                     "onlyCountries": [
                         "AR"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/ar.png"
                 },
                 {
                     "id": "clue-phone-code--56-is-present",
                     "aspect": "phone code +56 is present (Only)",
                     "onlyCountries": [
                         "CL"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/cl.png"
                 },
                 {
                     "id": "clue-phone-code--57-is-present",
                     "aspect": "phone code +57 is present (Only)",
                     "onlyCountries": [
                         "CO"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/co.png"
                 },
                 {
                     "id": "clue-phone-code--51-is-present",
                     "aspect": "phone code +51 is present (Only)",
                     "onlyCountries": [
                         "PE"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/pe.png"
                 },
                 {
                     "id": "clue-phone-code--52-is-present",
                     "aspect": "phone code +52 is present (Only)",
                     "onlyCountries": [
                         "MX"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/mx.png"
                 },
                 {
                     "id": "clue-phone-code--61-is-present",
                     "aspect": "phone code +61 is present (Only)",
                     "onlyCountries": [
                         "AU"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/au.png"
                 },
                 {
                     "id": "clue-phone-code--64-is-present",
                     "aspect": "phone code +64 is present (Only)",
                     "onlyCountries": [
                         "NZ"
-                    ]
+                    ],
+                    "img": "https://flagcdn.com/w320/nz.png"
                 },
                 {
                     "id": "clue-phone-starts-with-1-800",
@@ -9456,7 +9750,8 @@
                         "SG",
                         "ID",
                         "AE"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/infrastructure/curbstones.png"
                 },
                 {
                     "id": "4022",
@@ -9467,7 +9762,8 @@
                         "Africa",
                         "Americas",
                         "Oceania"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/infrastructure/curbstones.png"
                 },
                 {
                     "id": "4023",
@@ -9475,7 +9771,8 @@
                     "likelyCountries": [
                         "IL",
                         "JO"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/infrastructure/curbstones.png"
                 },
                 {
                     "id": "4024",
@@ -13277,7 +13574,8 @@
                     "aspect": "Minka (Japanese thatched/tile roofs, white/black walls)",
                     "onlyCountries": [
                         "JP"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/japanese.png"
                 },
                 {
                     "id": "4487",
@@ -14669,7 +14967,8 @@
                     "aspect": "Stop sign says 'Tomare' (in Kanji)",
                     "onlyCountries": [
                         "JP"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/japanese.png"
                 },
                 {
                     "id": "4657",
@@ -15776,7 +16075,8 @@
                     "aspect": "Karst mountains and Thai architecture",
                     "onlyCountries": [
                         "TH"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/thai.png"
                 },
                 {
                     "id": "4783",
@@ -20612,7 +20912,8 @@
                     "aspect": "Thailand Post van (Red/White logo)",
                     "onlyCountries": [
                         "TH"
-                    ]
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/scripts/thai.png"
                 },
                 {
                     "id": "5383",
