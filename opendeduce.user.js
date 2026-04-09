@@ -272,7 +272,7 @@
 
         i.oninput = (e) => {
             const v = e.target.value.toLowerCase().trim();
-            if(v.length < 3) { s.style.display = 'none'; c.style.display = 'none'; return; }
+            if(v.length < 1) { s.style.display = 'none'; c.style.display = 'none'; return; }
             let matches = [];
             STATE.rules.forEach(g => {
                 g.clues.forEach(cl => { 

@@ -10317,8 +10317,8 @@
                     "id": "4082",
                     "aspect": "Yellow front and rear license plates",
                     "likelyCountries": [
-                        "UK",
                         "IL",
+                        "UK",
                         "CO"
                     ]
                 },
@@ -11911,9 +11911,9 @@
                     "id": "4265",
                     "aspect": "Presence of Water Buffalo",
                     "likelyCountries": [
-                        "TH",
-                        "VN",
                         "PH",
+                        "VN",
+                        "TH",
                         "ID"
                     ]
                 },
@@ -12571,13 +12571,6 @@
                     "aspect": "Yellow Rear License Plates",
                     "likelyCountries": [
                         "GB"
-                    ]
-                },
-                {
-                    "id": "4346",
-                    "aspect": "Yellow Front and Rear License Plates",
-                    "likelyCountries": [
-                        "IL"
                     ]
                 },
                 {
@@ -16349,14 +16342,6 @@
                     "likelyCountries": [
                         "NZ",
                         "AU"
-                    ]
-                },
-                {
-                    "id": "4811",
-                    "aspect": "Presence of Water Buffalo",
-                    "likelyCountries": [
-                        "TH",
-                        "VN"
                     ]
                 },
                 {
