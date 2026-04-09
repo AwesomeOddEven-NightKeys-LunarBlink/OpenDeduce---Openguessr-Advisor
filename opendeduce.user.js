@@ -124,14 +124,19 @@
 
     /**
      * EQUAL-SLICE REDISTRIBUTION LOGIC
-     */
     function updateScoring() {
-        const container = document.querySelector('.od-suspect-list'), meter = document.getElementById('od-meter'), countText = document.getElementById('od-count');
+        const container = document.querySelector(".od-suspect-list"), meter = document.getElementById("od-meter"), countText = document.getElementById("od-count");
         if (!container) return;
 
-        // Base weight: 1.0 for all countries
-        const suspects = STATE.countries.map(c => ({...c, weight: 1.0}));
+        // Base weight tracking for delta display
+        const totalWOld = STATE.countries.reduce((a, b) => a + (b.weight || 0), 0);
+        const oldProbs = STATE.countries.map(s => ({ 
+            id: s.id, 
+            p: totalWOld > 0 ? (s.weight / totalWOld * 100) : (100 / STATE.countries.length) 
+        }));
 
+        STATE.countries.forEach(c => c.weight = 1.0);
+        const suspects = STATE.countries;
         STATE.activeClueIds.forEach(id => {
             let rule = null, category = "default"; 
             STATE.rules.forEach(g => { 
@@ -161,11 +166,16 @@
                 if (!isMatch) evidenceScore = CONFIG.PENALTY_FLOOR;
 
                 // 3. Narrowness Factor (Specificity Multiplier)
-                // Rules that match fewer people are more "valuable"
                 const specCount = (rule.onlyCountries?.length || rule.likelyCountries?.length || 50);
-                const specBonus = Math.max(1, 5 / specCount); // Up to 5x pull for very narrow clues
+                const specBonus = Math.max(1, 10 / specCount); // Increased to 10x for rare clues
                 
-                s.weight *= (evidenceScore * specBonus);
+                // 4. Rarity Multiplier (New Logic)
+                // If a clue matches very few countries compared to the continent, boost it.
+                let rarityBonus = 1.0;
+                if (rule.likelyCountries?.length < 20) rarityBonus = 2.0;
+                if (rule.onlyCountries?.length < 5) rarityBonus = 5.0;
+
+                s.weight *= (evidenceScore * specBonus * rarityBonus);
             });
         });
 
@@ -189,20 +199,42 @@
 
         container.innerHTML = sorted.map(s => {
             const opacity = s.prob > 0 ? Math.max(0.4, s.prob/100) : 0.2;
-            return `<div class="od-suspect-row" style="opacity:${opacity}"><span>${s.name}</span><span class="od-score">${Math.round(s.prob)}%</span></div>`;
+            const old = prevProbs.find(p => p.id === s.id);
+            const delta = old ? (s.prob - old.p) : 0;
+            const deltaStr = (Math.abs(delta) > 0.5) ? (delta > 0 ? `<span style="color:#10b981; font-size:0.6rem; margin-right:8px;">+${Math.round(delta)}%</span>` : `<span style="color:#f87171; font-size:0.6rem; margin-right:8px;">${Math.round(delta)}%</span>`) : "";
+
+            return `<div class="od-suspect-row" style="opacity:${opacity}"><span>${deltaStr}${s.name}</span><span class="od-score">${Math.round(s.prob)}%</span></div>`;
+        }).join('');
         }).join('');
     }
 
     function setupSearch() {
         const i = document.getElementById('od-search'), s = document.getElementById('od-suggest'), c = document.getElementById('od-content');
+        
+        const getScore = (q, text) => {
+            const t = text.toLowerCase(), query = q.toLowerCase();
+            if (t === query) return 100;
+            if (t.includes(query)) return 80;
+            // Fuzzy: check for character overlap and partial words
+            const words = query.split(" ");
+            let matchCount = 0;
+            words.forEach(w => { if (t.includes(w)) matchCount++; });
+            if (matchCount > 0) return 40 + (matchCount * 10);
+            return 0;
+        };
+
         i.oninput = (e) => {
             const v = e.target.value.toLowerCase().trim();
             if(v.length < 3) { s.style.display = 'none'; c.style.display = 'none'; return; }
             let matches = [];
             STATE.rules.forEach(g => {
-                const catMatch = g.category.toLowerCase().includes(v);
-                g.clues.forEach(cl => { if (catMatch || cl.aspect.toLowerCase().includes(v)) matches.push({...cl, category: g.category}); });
+                g.clues.forEach(cl => { 
+                    const score = Math.max(getScore(v, cl.aspect), getScore(v, g.category));
+                    if (score > 20) matches.push({...cl, category: g.category, score}); 
+                });
             });
+            matches.sort((a,b) => b.score - a.score);
+
             if(matches.length > 0) {
                 s.innerHTML = matches.slice(0, 15).map(m => `
                     <div class="od-suggestion-item" data-id="${m.id}" data-img="${m.img||''}">

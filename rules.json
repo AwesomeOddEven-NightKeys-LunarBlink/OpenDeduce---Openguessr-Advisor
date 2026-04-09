@@ -1316,6 +1316,27 @@
                         "LR",
                         "MM"
                     ]
+                },
+                {
+                    "id": "hyd-pt-grey",
+                    "aspect": "Portugal: Circular grey fire hydrant pillars",
+                    "onlyCountries": [
+                        "PT"
+                    ]
+                },
+                {
+                    "id": "hyd-gr-pillar",
+                    "aspect": "Greece: Specific red/white hydrant pillars",
+                    "onlyCountries": [
+                        "GR"
+                    ]
+                },
+                {
+                    "id": "hyd-tw-red",
+                    "aspect": "Taiwan: Red hydrant with yellow cap",
+                    "onlyCountries": [
+                        "TW"
+                    ]
                 }
             ]
         },
@@ -9541,6 +9562,34 @@
                     "aspect": "Concrete, 'pinwheel' insulators",
                     "likelyCountries": [
                         "JP"
+                    ]
+                },
+                {
+                    "id": "pol-mx-hex",
+                    "aspect": "Mexico: Hexagonal concrete pole",
+                    "onlyCountries": [
+                        "MX"
+                    ]
+                },
+                {
+                    "id": "pol-tw-base",
+                    "aspect": "Taiwan: Black and yellow diagonal stripes at pole base",
+                    "onlyCountries": [
+                        "TW"
+                    ]
+                },
+                {
+                    "id": "pol-it-3band",
+                    "aspect": "Italy: Concrete pole with 3 horizontal bands",
+                    "onlyCountries": [
+                        "IT"
+                    ]
+                },
+                {
+                    "id": "pol-hu-ladder",
+                    "aspect": "Hungary: Ladder-style concrete pole (A-shape with rungs)",
+                    "onlyCountries": [
+                        "HU"
                     ]
                 }
             ]
@@ -21568,6 +21617,34 @@
                     "aspect": "Orange or T-Mobile (Orange/Magenta branding)",
                     "likelyContinents": [
                         "Europe",
+                        "US"
+                    ]
+                },
+                {
+                    "id": "bill-jcdecaux",
+                    "aspect": "Billboard: JCDecaux (Common in France/Europe)",
+                    "likelyCountries": [
+                        "FR",
+                        "ES",
+                        "GB",
+                        "IT"
+                    ],
+                    "img": "https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/infrastructure/jcdecaux.png"
+                },
+                {
+                    "id": "store-oxxo",
+                    "aspect": "Retail: OXXO convenience store",
+                    "onlyCountries": [
+                        "MX",
+                        "CL",
+                        "CO",
+                        "PE"
+                    ]
+                },
+                {
+                    "id": "store-wawa",
+                    "aspect": "Retail: Wawa (US East Coast)",
+                    "onlyCountries": [
                         "US"
                     ]
                 }
