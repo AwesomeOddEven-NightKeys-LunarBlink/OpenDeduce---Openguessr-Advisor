@@ -23,6 +23,7 @@
             "European Bollards": 0.92,
             "Road Markings": 0.90,
             "Utility Poles": 0.88,
+            "Continents": 1.0,  // Continents are now hard constraints
             "Language & Script": 0.95,
             "Google Car Meta": 0.98,
             "Phone Codes": 0.99,
@@ -31,9 +32,9 @@
             "Advanced Urbanisms & Paving Systems Block": 0.85,
             "Commercial Logistics & Shopfront Archetypes Block": 0.80,
             "Social & Cultural Markers Block": 0.75,
-            "Advanced Physical Geography & Atmospheric Conditions Block": 0.40,
-            "Environmental & Nature Block": 0.35,
-            "Landscape": 0.45,
+            "Advanced Physical Geography & Atmospheric Conditions Block": 0.65, // Increased sensitivity
+            "Environmental & Nature Block": 0.60, // Increased sensitivity
+            "Landscape": 0.65, // Increased sensitivity
             "default": 0.50
         },
         PENALTY_FLOOR: 0.001 // 0.1% floor instead of hard zero
@@ -192,18 +193,18 @@
         })).sort((a,b) => b.prob - a.prob);
 
         const confidence = (sorted.length > 1) ? (sorted[0].prob - sorted[1].prob) : sorted[0].prob;
-        countText.innerHTML = `${sorted.filter(s=>s.prob > 1).length} Suspects | <span style="color:${confidence > 30 ? '#10b981' : '#f59e0b'}">Conf: ${Math.round(confidence)}%</span>`;
+        countText.innerHTML = `${sorted.filter(s=>s.prob > 1).length} Suspects | <span style="color:${confidence > 30 ? '#10b981' : '#f59e0b'}">Conf: ${confidence.toFixed(1)}%</span>`;
         
-        const survivors = sorted.filter(s => s.prob > 0).length;
+        const survivors = sorted.filter(s => s.prob > 0.1).length;
         meter.style.width = ((survivors / STATE.countries.length) * 100) + '%';
 
         container.innerHTML = sorted.map(s => {
             const opacity = s.prob > 0 ? Math.max(0.4, s.prob/100) : 0.2;
             const old = prevProbs.find(p => p.id === s.id);
             const delta = old ? (s.prob - old.p) : 0;
-            const deltaStr = (Math.abs(delta) > 0.5) ? (delta > 0 ? `<span style="color:#10b981; font-size:0.6rem; margin-right:8px;">+${Math.round(delta)}%</span>` : `<span style="color:#f87171; font-size:0.6rem; margin-right:8px;">${Math.round(delta)}%</span>`) : "";
+            const deltaStr = (Math.abs(delta) > 0.1) ? (delta > 0 ? `<span style="color:#10b981; font-size:0.6rem; margin-right:8px;">+${delta.toFixed(1)}%</span>` : `<span style="color:#f87171; font-size:0.6rem; margin-right:8px;">${delta.toFixed(1)}%</span>`) : "";
 
-            return `<div class="od-suspect-row" style="opacity:${opacity}"><span>${deltaStr}${s.name}</span><span class="od-score">${Math.round(s.prob)}%</span></div>`;
+            return `<div class="od-suspect-row" style="opacity:${opacity}"><span>${deltaStr}${s.name}</span><span class="od-score">${s.prob.toFixed(1)}%</span></div>`;
         }).join('');
     }
 
