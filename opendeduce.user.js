@@ -23,18 +23,20 @@
             "European Bollards": 0.92,
             "Road Markings": 0.90,
             "Utility Poles": 0.88,
-            "Continents": 1.0,  // Continents are now hard constraints
+            "Continents": 1.0,  
             "Language & Script": 0.95,
-            "Google Car Meta": 0.98,
+            "Google Car Meta": 1.0, // Hard-Lock meta
+            "Atmospheric Conditions": 0.99, // Sun position is now high trust
             "Phone Codes": 0.99,
             "Internet TLDs": 0.99,
             "Surgical Infrastructure": 0.95,
             "Advanced Urbanisms & Paving Systems Block": 0.85,
             "Commercial Logistics & Shopfront Archetypes Block": 0.80,
             "Social & Cultural Markers Block": 0.75,
-            "Advanced Physical Geography & Atmospheric Conditions Block": 0.65, // Increased sensitivity
-            "Environmental & Nature Block": 0.60, // Increased sensitivity
-            "Landscape": 0.65, // Increased sensitivity
+            "Advanced Physical Geography & Atmospheric Conditions Block": 0.85, // Increased sensitivity
+            "Environmental & Nature Block": 0.60, 
+            "Landscape": 0.65, 
+            "Nature": 0.65,
             "default": 0.50
         },
         PENALTY_FLOOR: 0.001 // 0.1% floor instead of hard zero
@@ -196,6 +198,18 @@
                 let isMatch = true;
                 if (rule.onlyCountries?.length > 0 && !rule.onlyCountries.includes(countryId)) isMatch = false;
                 if (rule.onlyContinents?.length > 0 && !rule.onlyContinents.includes(s.continent)) isMatch = false;
+                
+                // 2b. Hemisphere/Region Hard-Lock
+                if (rule.onlyRegions?.length > 0) {
+                    const countryHem = s.hemisphere; // North, South, Equator
+                    if (rule.onlyRegions.includes("Southern Hemisphere") && countryHem === "North") isMatch = false;
+                    if (rule.onlyRegions.includes("Northern Hemisphere") && countryHem === "South") isMatch = false;
+                    // Equator countries have 50% penalty instead of full floor for hemisphere rules
+                    if ((rule.onlyRegions.includes("Southern Hemisphere") || rule.onlyRegions.includes("Northern Hemisphere")) && countryHem === "Equator") {
+                        evidenceScore *= 0.5;
+                    }
+                }
+
                 if (rule.excludeCountries?.length > 0 && rule.excludeCountries.includes(countryId)) isMatch = false;
                 if (rule.excludeContinents?.length > 0 && rule.excludeContinents.includes(s.continent)) isMatch = false;
 
@@ -235,7 +249,7 @@
             const opacity = s.prob > 0 ? Math.max(0.4, s.prob/100) : 0.2;
             const old = prevProbs.find(p => p.id === s.id);
             const delta = old ? (s.prob - old.p) : 0;
-            const deltaStr = (Math.abs(delta) > 0.1) ? (delta > 0 ? `<span style="color:#10b981; font-size:0.6rem; margin-right:8px;">+${delta.toFixed(1)}%</span>` : `<span style="color:#f87171; font-size:0.6rem; margin-right:8px;">${delta.toFixed(1)}%</span>`) : "";
+            const deltaStr = (Math.abs(delta) > 0.05) ? (delta > 0 ? `<span style="color:#10b981; font-size:0.6rem; margin-right:8px;">+${delta.toFixed(1)}%</span>` : `<span style="color:#f87171; font-size:0.6rem; margin-right:8px;">${delta.toFixed(1)}%</span>`) : "";
 
             return `<div class="od-suspect-row" style="opacity:${opacity}"><span>${deltaStr}${s.name}</span><span class="od-score">${s.prob.toFixed(1)}%</span></div>`;
         }).join('');
