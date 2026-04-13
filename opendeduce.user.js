@@ -8,6 +8,7 @@
 // @updateURL    https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/opendeduce.user.js
 // @downloadURL  https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/opendeduce.user.js
 // @resource     DATABASE https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/rules.json
+// @icon         https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/logo.png
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
 // ==/UserScript==
@@ -63,7 +64,9 @@
         #od-panel.minimized { max-height: 78px; overflow: hidden; }
         #od-panel * { box-sizing: border-box; }
         .od-header { padding: 22px 28px; border-bottom: 1px solid #ffffff11; cursor: move; display: flex; justify-content: space-between; align-items: center; }
-        .od-title-grp { display: flex; flex-direction: column; max-width: 200px; }
+        .od-logo-icon { width: 36px; height: 36px; border-radius: 10px; margin-right: 15px; box-shadow: 0 0 15px rgba(96,165,250, 0.4); }
+        .od-title-grp { display: flex; align-items: center; }
+        .od-title-text-grp { display: flex; flex-direction: column; max-width: 200px; }
         .od-badge { font-family: 'JetBrains Mono'; font-size: 0.6rem; color: #60a5fa; text-transform: uppercase; letter-spacing: 0.12em; }
         .od-title { font-size: 1.62rem; font-weight: 800; background: linear-gradient(135deg, #60a5fa, #c084fc, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.04em; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .od-controls { display: flex; gap: 10px; }
@@ -562,8 +565,15 @@
         p.style.top = STATE.pos.top + 'px'; p.style.left = STATE.pos.left !== null ? STATE.pos.left + 'px' : 'auto'; p.style.right = STATE.pos.right !== 'auto' ? STATE.pos.right + 'px' : 'auto';
         if(STATE.isMinimized) p.classList.add('minimized');
         p.innerHTML = `
-            <div class="od-header"><div class="od-title-grp"><span class="od-badge">Scalpel v1.1.0</span><h1 class="od-title">OpenDeduce</h1></div>
-            <div class="od-controls"><div class="od-btn" id="od-export" title="Export Trace">📋</div><div class="od-btn" id="od-reset">🔄</div><div class="od-btn" id="od-min">—</div></div></div>
+            <div class="od-header">
+                <div class="od-title-grp">
+                    <img src="https://raw.githack.com/AwesomeOddEven-NightKeys-LunarBlink/OpenDeduce_OpenGuessr-Advisor/main/media/logo.png" class="od-logo-icon">
+                    <div class="od-title-text-grp">
+                        <span class="od-badge">Scalpel v1.1.0</span>
+                        <h1 class="od-title">OpenDeduce</h1>
+                    </div>
+                </div>
+                <div class="od-controls"><div class="od-btn" id="od-export" title="Export Trace">📋</div><div class="od-btn" id="od-reset">🔄</div><div class="od-btn" id="od-min">—</div></div></div>
             <div id="od-hud-body" style="display:${STATE.isMinimized?'none':'block'}">
                 <div class="od-search-box"><input type="text" id="od-search" class="od-input" placeholder="Search Rules 1,000+ Forensic Clues...">
                 <div id="od-suggest" class="od-suggestions"></div></div>
